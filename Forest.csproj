@@ -637,10 +637,15 @@
     <Compile Include="Assets\Scripts\AttackRottate.cs" />
     <Compile Include="Assets\Scripts\AttackTrail.cs" />
     <Compile Include="Assets\Scripts\BabyFly.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Eneamy.cs" />
     <Compile Include="Assets\Scripts\Fly_Range.cs" />
     <Compile Include="Assets\Scripts\Interaction.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\Scripts\ToLevel.cs" />
     <Compile Include="Assets\Scripts\TopViewMove.cs" />
     <Compile Include="Assets\Scripts\ToTarget.cs" />
     <Compile Include="Assets\Scripts\TrailSpawn.cs" />

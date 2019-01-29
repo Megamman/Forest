@@ -7,17 +7,21 @@ public class Fly_Range : MonoBehaviour
     public Animator anim;
     public GameObject spawning;
     public Vector3 spawn;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        StartCoroutine(Spawn());
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(Spawn());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            StopCoroutine(Spawn());
+        }
     }
 
     IEnumerator Spawn()
@@ -48,5 +52,10 @@ public class Fly_Range : MonoBehaviour
 
         //Debug.Log("I stopped moving");
         StartCoroutine(Spawn());
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

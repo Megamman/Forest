@@ -10,11 +10,15 @@ public class ToTarget : MonoBehaviour
 
     public bool followPlayer = true;
 
-    void Start()
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (followPlayer)
+        if (other.CompareTag("Player"))
         {
-            target = GameObject.FindWithTag("Player").transform;
+            if (followPlayer)
+            {
+                target = GameObject.FindWithTag("Player").transform;
+            }
         }
     }
 

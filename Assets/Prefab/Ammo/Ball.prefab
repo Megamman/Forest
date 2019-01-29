@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 130086754756891029}
   - component: {fileID: 4958559755686403394}
-  - component: {fileID: 3893330748717815052}
+  - component: {fileID: 8699553931856314994}
+  - component: {fileID: 5582085848389344220}
+  - component: {fileID: 6464732287583070787}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -80,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3893330748717815052
+--- !u!114 &8699553931856314994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,8 +91,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 8114487578568309026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202d2d910c261e648bd98c8f6f1e3b6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4659502453b16f248a1e16faf67eb8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 1
-  speed: 9
+  target: {fileID: 9150233022505273158, guid: 316708bca7ee7ba4aa3b28e07afb7f60, type: 3}
+--- !u!50 &5582085848389344220
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114487578568309026}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!58 &6464732287583070787
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114487578568309026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.16499999

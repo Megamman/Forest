@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1633220262209830222}
   - component: {fileID: 1633220262209830225}
   - component: {fileID: 1633220262209830220}
+  - component: {fileID: 5395934125488140708}
   m_Layer: 0
   m_Name: Fly Queen
   m_TagString: Untagged
@@ -116,3 +117,19 @@ MonoBehaviour:
   spawning: {fileID: 5654251162621355362, guid: 341b46ffb8dbc09488a863be35429098,
     type: 3}
   spawn: {x: 0, y: 0, z: 0}
+--- !u!58 &5395934125488140708
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633220262209830224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 18.02124
