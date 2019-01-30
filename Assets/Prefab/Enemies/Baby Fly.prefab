@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 5654251162709725216}
   - component: {fileID: 5654251162709725217}
   - component: {fileID: 5654251162709725218}
-  - component: {fileID: 7649745106273171500}
+  - component: {fileID: 8906994581058466147}
   m_Layer: 0
   m_Name: Baby_Fly
   m_TagString: Untagged
@@ -180,7 +180,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.5, y: -0.32}
   m_Size: {x: 5.08, y: 4}
   m_Direction: 1
---- !u!114 &7649745106273171500
+--- !u!114 &8906994581058466147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5654251162709725213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60486ada92b9eb44b9b1472aa37e6eb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e08f5f862fa8f34f8c8e995135a1612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noise: 5
+  noise: 10

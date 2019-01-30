@@ -54,8 +54,4 @@ public class Fly_Range : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
 }
