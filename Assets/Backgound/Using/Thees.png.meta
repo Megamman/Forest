@@ -259,8 +259,8 @@ TextureImporter:
       name: Thees_8
       rect:
         serializedVersion: 2
-        x: 39
-        y: 38
+        x: 23
+        y: 24
         width: 16
         height: 16
       alignment: 0
@@ -279,12 +279,12 @@ TextureImporter:
       name: Thees_10
       rect:
         serializedVersion: 2
-        x: 88
-        y: 74
+        x: 87
+        y: 72
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.45666122}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,8 +299,8 @@ TextureImporter:
       name: Thees_11
       rect:
         serializedVersion: 2
-        x: 72
-        y: 74
+        x: 104
+        y: 72
         width: 16
         height: 16
       alignment: 0
@@ -324,7 +324,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
