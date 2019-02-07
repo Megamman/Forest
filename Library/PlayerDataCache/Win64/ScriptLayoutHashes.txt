@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/MRO11/Desktop/Forest/Build/Project Forest.exe
+C:/Users/MRO11/Desktop/Forest/Forest Game Prototype/V0.2/Forest.exe
 SceneListBegin?
 Assets/Scenes/Home.unity
 Assets/Scenes/Level_1.unity
@@ -120,7 +120,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 c54e5d238d05f0415928866fafbf602e Assembly-CSharp.dll:.ToLevel
-54ebb05be3b2857b5817f0b321526f64 Assembly-CSharp.dll:.Bullet
+afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Bullet
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
@@ -135,6 +135,7 @@ d76e65997f60bc7defdb07a4b982e053 Assembly-CSharp.dll:.AttackTrail
 1d52f10fea6fa529050da5defda485f4 Assembly-CSharp.dll:UnityEngine.RuleOverrideTile
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 25d6a61a60f20a3fbc57140f20663630 Assembly-CSharp.dll:UnityEngine.HexagonalRuleTile
+63a9fc022812721174fd48fe9cb9dafa Assembly-CSharp.dll:.Enemy
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -150,7 +151,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AttackRottate
+afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.AttackRottate
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 8daf1ccb1e486bdf4fa23b49a462094c Assembly-CSharp.dll:.TrailSpawn
@@ -170,6 +171,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitGame
 3b3bf14021899a113dbb5c9e4f0d86ad Assembly-CSharp.dll:UnityEngine.Tilemaps.GridInformation
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
@@ -180,8 +182,6 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 dc7a36a6099c2144ffa1a45eca5028ec Assembly-CSharp.dll:.TopViewMove
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
-05215faf2567ab2ea04464b4287bf48f Assembly-CSharp.dll:.Fly_Range
+b62b33798a26c22738a6db4d5607d309 Assembly-CSharp.dll:.Fly_Range
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 97d2589b1b583409abfa9283e5fdce7f Assembly-CSharp.dll:.EnemyBehavior
-63a9fc022812721174fd48fe9cb9dafa Assembly-CSharp.dll:.Enemy
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitGame

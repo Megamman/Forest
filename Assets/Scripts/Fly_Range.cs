@@ -5,53 +5,68 @@ using UnityEngine;
 public class Fly_Range : MonoBehaviour
 {
     public Animator anim;
-    public GameObject spawning;
-    public Vector3 spawn;
-    
-    void OnTriggerEnter2D(Collider2D other)
+
+    public float speed;
+    public float stoppingDist;
+    public float retreatDist;
+    public float noise;
+    public float startTimeBtwShots;
+    private float timeBtwShots;
+
+    public GameObject projectile;
+    private Transform player;
+
+    void Start ()
     {
-        if (other.CompareTag("Player"))
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        timeBtwShots = startTimeBtwShots;
+    }
+
+    void Update ()
+    {
+        if (Vector2.Distance(transform.position, player.position) > stoppingDist)
         {
-            StartCoroutine(Spawn());
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+        else if (Vector2.Distance(transform.position, player.position) < stoppingDist && Vector2.Distance(transform.position, player.position) > retreatDist)
+        {
+            transform.position = this.transform.position;
+        }
+        else if (Vector2.Distance(transform.position, player.position) < retreatDist)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        if(timeBtwShots <= 0)
+        {
+            anim.SetInteger("Spawn", 1);
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+            anim.SetInteger("Spawn", 0);
+        }
+
+        Vector2 pos = Random.insideUnitCircle * noise;
+        transform.localPosition = Vector2.Lerp(transform.localPosition, pos, Time.deltaTime);
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if(other.CompareTag("Blade"))
         {
-            StopCoroutine(Spawn());
+            Debug.Log("Hit!");
+            Destroy(gameObject);
         }
     }
 
-    IEnumerator Spawn()
+    void OnBecameInvisible()
     {
-
-        //Debug.Log("I am idle");
-        // This will start a timer
-        yield return new WaitForSeconds(2f);
-
-        // This will set the parameter Intiger in the animator to the generated number
-        anim.SetInteger("Spawn", 1);
-        //Debug.Log(rand);
-
-        StartCoroutine(ResetAnim());
+        Destroy(gameObject);
     }
 
-    IEnumerator ResetAnim()
-    {
-        yield return new WaitForSeconds(0.25f);
-
-
-        // This will set the parameter Intiger in the animato to the set number (0)
-        anim.SetInteger("Spawn", 0);
-        
-        // This will spawn the object in gameobject spawning
-        spawn = transform.TransformPoint(Vector3.down * 2);
-        Instantiate(spawning, spawn,spawning.transform.rotation);
-
-        //Debug.Log("I stopped moving");
-        StartCoroutine(Spawn());
-    }
-
+    //anim.SetInteger("Spawn", 1);
 }

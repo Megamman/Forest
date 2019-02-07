@@ -5,28 +5,23 @@ using UnityEngine;
 public class AttackRottate : MonoBehaviour
 {
 
-    // Update is called once per frame
+    public float speed = 200f;
+
     void Update()
     {
-        if (Input.GetKeyDown("w"))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 180);
-        }
+        mouseDir();
 
-        if (Input.GetKeyDown("a"))
-        {
-            transform.eulerAngles = new Vector3(0, 0, -90);
-        }
+    }
 
-        if (Input.GetKeyDown("d"))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 90);
-        }
+    void mouseDir()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = UnityEngine.Camera.main.ScreenToWorldPoint(mousePosition);
 
-        if (Input.GetKeyDown("s"))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+        Vector2 direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
 
+        transform.up = direction;
     }
 }

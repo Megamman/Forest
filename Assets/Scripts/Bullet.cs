@@ -4,27 +4,46 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-	float moveSpeed = 7f;
+    public float speed;
 
-	Rigidbody2D rb;
+    private Transform player;
+    private Vector2 target;
 
-    public Transform target;
-	public Vector3 moveDirection;
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-	// Use this for initialization
-	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
-		moveDirection = (target.transform.position);
-		rb.velocity = new Vector3 (moveDirection.x, moveDirection.y);
-		Destroy (gameObject, 3f);
-	}
+        target = new Vector2(player.position.x, player.position.y);
+    }
 
-	void OnTriggerEnter2D (Collider2D col)
-	{
-		if (col.gameObject.name.Equals ("Player")) {
-			Debug.Log ("Hit!");
-			Destroy (gameObject);
-		}
-	}
+    void Update()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        if(transform.position.x == target.x && transform.position.y == target.y)
+        {
+            DestroyProjectile();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            DestroyProjectile();
+            Debug.Log("Hit");
+        }
+
+        if (other.CompareTag("Blade"))
+        {
+            DestroyProjectile();
+            Debug.Log("Deflected");
+        }
+    }
+
+    void DestroyProjectile()
+    {
+        Destroy(gameObject);
+        Debug.Log("Miss");
+    }
 }

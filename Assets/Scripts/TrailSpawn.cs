@@ -10,7 +10,7 @@ public class TrailSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             Instantiate(Trail, transform.position, transform.rotation);
             Trail.SetActive(true);
