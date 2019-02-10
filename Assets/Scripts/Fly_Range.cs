@@ -23,6 +23,14 @@ public class Fly_Range : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Update();
+        }
+    }
+
     void Update ()
     {
         if (Vector2.Distance(transform.position, player.position) > stoppingDist)
@@ -54,19 +62,6 @@ public class Fly_Range : MonoBehaviour
         transform.localPosition = Vector2.Lerp(transform.localPosition, pos, Time.deltaTime);
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.CompareTag("Blade"))
-        {
-            Debug.Log("Hit!");
-            Destroy(gameObject);
-        }
-    }
-
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
 
     //anim.SetInteger("Spawn", 1);
 }

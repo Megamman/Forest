@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7483915855711073470}
   - component: {fileID: 462664907640835537}
   - component: {fileID: 4487332451564496098}
+  - component: {fileID: 2023791160528523892}
   m_Layer: 0
   m_Name: Fly
   m_TagString: enemy
@@ -116,7 +117,7 @@ MonoBehaviour:
   anim: {fileID: 7483915855711073470}
   speed: 7
   stoppingDist: 10
-  retreatDist: 5
+  retreatDist: 7
   noise: 10
   startTimeBtwShots: 3
   projectile: {fileID: 8114487578568309026, guid: d91b0271d247f1848adb14dfb6bccd75,
@@ -137,6 +138,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.020747285, y: 0.44157812}
   m_Size: {x: 2.0479913, y: 4.357654}
   m_Direction: 0
+--- !u!50 &2023791160528523892
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698540841559957698}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3177065754002047929
 GameObject:
   m_ObjectHideFlags: 0
