@@ -27,72 +27,10 @@ Transform:
   m_LocalPosition: {x: 0.5673329, y: -2.703094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8334754799638446804}
+  - {fileID: 5331868662325747144}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1411745855528622128
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8334754799638446804}
-  - component: {fileID: 3266169200254282023}
-  - component: {fileID: 413457399667460479}
-  m_Layer: 0
-  m_Name: FlyQueen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8334754799638446804
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411745855528622128}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5331868662325747144}
-  m_Father: {fileID: 5480660714088732912}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &3266169200254282023
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411745855528622128}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03796625, y: 0.44610596}
-  m_Size: {x: 1.752595, y: 4.1322327}
-  m_Direction: 0
---- !u!114 &413457399667460479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411745855528622128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e08f5f862fa8f34f8c8e995135a1612, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noise: 10
 --- !u!1 &7835406744495574361
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +43,8 @@ GameObject:
   - component: {fileID: 8986776671146348099}
   - component: {fileID: 8913333458528246688}
   - component: {fileID: 8503131058165808253}
-  - component: {fileID: 5093667394409591713}
+  - component: {fileID: 3083231766031098597}
+  - component: {fileID: 5165427796025435927}
   m_Layer: 0
   m_Name: Fly Queen
   m_TagString: Untagged
@@ -124,7 +63,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8334754799638446804}
+  m_Father: {fileID: 5480660714088732912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8986776671146348099
@@ -213,8 +152,9 @@ MonoBehaviour:
   noise: 15
   startTimeBtwShots: 5
   projectile: {fileID: 0}
---- !u!58 &5093667394409591713
-CircleCollider2D:
+  rb2d: {fileID: 0}
+--- !u!70 &3083231766031098597
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -223,9 +163,30 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 24.269253
+  m_Offset: {x: 0.03796625, y: 0.44610596}
+  m_Size: {x: 1.752595, y: 4.1322327}
+  m_Direction: 0
+--- !u!50 &5165427796025435927
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835406744495574361}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -7,6 +7,7 @@ public class EnemyDeath : MonoBehaviour
     public Transform targetchild { get; private set; }
     public GameObject child;
     public bool followChild = true;
+    public Rigidbody2D rb2d;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class EnemyDeath : MonoBehaviour
 
     void update()
     {
+        rb2d.velocity = new Vector2();
     }
 
     void OnTriggerExit2D(Collider2D other)

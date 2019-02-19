@@ -15,6 +15,7 @@ public class Fly_Range : MonoBehaviour
 
     public GameObject projectile;
     private Transform player;
+    public Rigidbody2D rb2d;
 
     void Start ()
     {
@@ -60,6 +61,8 @@ public class Fly_Range : MonoBehaviour
 
         Vector2 pos = Random.insideUnitCircle * noise;
         transform.localPosition = Vector2.Lerp(transform.localPosition, pos, Time.deltaTime);
+
+        rb2d.velocity = new Vector2();
     }
 
 

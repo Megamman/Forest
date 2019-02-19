@@ -122,6 +122,7 @@ MonoBehaviour:
   startTimeBtwShots: 3
   projectile: {fileID: 8114487578568309026, guid: d91b0271d247f1848adb14dfb6bccd75,
     type: 3}
+  rb2d: {fileID: 2023791160528523892}
 --- !u!70 &4487332451564496098
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
