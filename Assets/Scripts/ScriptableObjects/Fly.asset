@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831776ff473115849be150e6fa4d8bb2, type: 3}
   m_Name: Fly
   m_EditorClassIdentifier: 
-  worldSpeed: 3
+  worldSpeed: 10
+  stayCloseToPlayer: 0
   damage: 2

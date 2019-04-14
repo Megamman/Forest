@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Fly_Range : MonoBehaviour
 {
+    public EnemyBehavior behavior;
+
     public Animator anim;
 
-    public float speed;
     public float stoppingDist;
     public float retreatDist;
     public float noise;
@@ -36,7 +37,7 @@ public class Fly_Range : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.position) > stoppingDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.worldSpeed * Time.deltaTime);
         }
         else if (Vector2.Distance(transform.position, player.position) < stoppingDist && Vector2.Distance(transform.position, player.position) > retreatDist)
         {
@@ -44,7 +45,7 @@ public class Fly_Range : MonoBehaviour
         }
         else if (Vector2.Distance(transform.position, player.position) < retreatDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.worldSpeed * Time.deltaTime);
         }
 
         if(timeBtwShots <= 0)
