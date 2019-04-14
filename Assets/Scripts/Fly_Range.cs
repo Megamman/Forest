@@ -35,9 +35,10 @@ public class Fly_Range : MonoBehaviour
 
     void Update ()
     {
+        //If rangeAttack
         if (Vector2.Distance(transform.position, player.position) > stoppingDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.worldSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);
         }
         else if (Vector2.Distance(transform.position, player.position) < stoppingDist && Vector2.Distance(transform.position, player.position) > retreatDist)
         {
@@ -45,7 +46,7 @@ public class Fly_Range : MonoBehaviour
         }
         else if (Vector2.Distance(transform.position, player.position) < retreatDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.worldSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.speed * Time.deltaTime);
         }
 
         if(timeBtwShots <= 0)

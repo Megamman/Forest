@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 5331868662325747144}
   - component: {fileID: 8986776671146348099}
   - component: {fileID: 8913333458528246688}
-  - component: {fileID: 8503131058165808253}
   - component: {fileID: 3083231766031098597}
   - component: {fileID: 5165427796025435927}
   m_Layer: 0
@@ -133,26 +132,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8503131058165808253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7835406744495574361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da29f0deb412b2f45ab0670cb42959b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8913333458528246688}
-  speed: 9
-  stoppingDist: 15
-  retreatDist: 10
-  noise: 15
-  startTimeBtwShots: 5
-  projectile: {fileID: 0}
-  rb2d: {fileID: 0}
 --- !u!70 &3083231766031098597
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

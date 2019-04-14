@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemyhit : MonoBehaviour
 {
     public float noise = 10f;
 

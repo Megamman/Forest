@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5654251162621355360}
-  - component: {fileID: 7282365870346848496}
   - component: {fileID: 2608734856448085107}
   - component: {fileID: 4683583768483419452}
   m_Layer: 0
@@ -34,21 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7282365870346848496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654251162621355362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189e539fb6c0f8d45a1f5d5b0a98f705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  child: {fileID: 5654251162709725213}
-  followChild: 1
-  rb2d: {fileID: 4683583768483419452}
 --- !u!70 &2608734856448085107
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,8 +81,8 @@ GameObject:
   - component: {fileID: 5654251162709725212}
   - component: {fileID: 5654251162709725216}
   - component: {fileID: 5654251162709725217}
-  - component: {fileID: 265196902333105648}
   - component: {fileID: 5911146602977737051}
+  - component: {fileID: 3065190974247139281}
   m_Layer: 0
   m_Name: Baby_Fly
   m_TagString: Untagged
@@ -187,27 +171,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &265196902333105648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654251162709725213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da29f0deb412b2f45ab0670cb42959b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behavior: {fileID: 11400000, guid: a8655d9a31c826f458e3a47814868c8a, type: 2}
-  anim: {fileID: 5654251162709725217}
-  speed: 7
-  stoppingDist: 1
-  retreatDist: 5
-  noise: 10
-  startTimeBtwShots: 0
-  projectile: {fileID: 0}
-  rb2d: {fileID: 0}
 --- !u!58 &5911146602977737051
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -224,3 +187,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 70
+--- !u!114 &3065190974247139281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654251162709725213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27189ba222dc79341816d1a9d6091fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavior: {fileID: 11400000, guid: 86c3f1fe7c7933946873af41f3e7878f, type: 2}
+  projectile: {fileID: 0}
+  anim: {fileID: 5654251162709725217}
+  rb2d: {fileID: 4683583768483419452}

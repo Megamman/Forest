@@ -5,10 +5,37 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Custom Data/Enemy Behavior", fileName = "New EnemyBehavior")]
 public class EnemyBehavior : ScriptableObject
 {
-    [Header("World Properties")]
-    public float worldSpeed = 5f;
-    public bool stayCloseToPlayer = true;
+    
 
-    [Header("Battle Properties")]
-    public int damage = 2;
+    [Header("Numbers")]
+    // Values of stats to character 
+    public int health;
+    public float speed = 8f;
+    public float noiseAmount;
+    public float damage;
+
+    // Attack
+    public float timeAttack;
+    public float startTimeBtwAttack;
+    // If rangeAttack = True
+    public float stoppingDist;
+    public float retreatDist;
+
+    [Header("Actives")]
+    // Use if() statments if true do this, else...
+    public bool keepDistance = true;
+    public bool meleeAttack = true;
+    public bool rangeAttack = true;
+    // If agressive = false than there is no need a collider for ditection
+    public bool aggressive = true;
+    public bool noise = false;
+
+    [Header("Animation")]
+    // Set the animations
+    public int animIdle = 0;
+    public int animMelee = 10;
+    public int animRange = 11;
+
+
+
 }

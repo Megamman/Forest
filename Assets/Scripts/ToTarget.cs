@@ -28,7 +28,7 @@ public class ToTarget : MonoBehaviour
 
         if (target != null)
         {
-            float step = behavior.worldSpeed * Time.deltaTime;
+            float step = behavior.speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
     }
