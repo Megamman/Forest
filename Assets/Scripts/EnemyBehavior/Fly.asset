@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831776ff473115849be150e6fa4d8bb2, type: 3}
+  m_Name: Fly
+  m_EditorClassIdentifier: 
+  name: Fly
+  health: 0
+  speed: 8
+  noiseAmount: 3
+  damage: 0
+  timeAttack: 1.8334751
+  startTimeBtwAttack: 2
+  stoppingDist: 5
+  retreatDist: 4
+  keepDistance: 1
+  meleeAttack: 0
+  rangeAttack: 1
+  aggressive: 1
+  noise: 1
+  animIdle: 0
+  animMelee: 10
+  animRange: 11

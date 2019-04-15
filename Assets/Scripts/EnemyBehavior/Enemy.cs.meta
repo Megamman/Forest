@@ -4,8 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - behavior: {fileID: 11400000, guid: 86c3f1fe7c7933946873af41f3e7878f, type: 2}
+  - behavior: {instanceID: 0}
   - projectile: {instanceID: 0}
+  - enemyGraphic: {instanceID: 0}
+  - anim: {instanceID: 0}
   - rb2d: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

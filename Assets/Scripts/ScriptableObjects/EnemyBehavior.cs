@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyBehavior : ScriptableObject
 {
     
+    public string name;
 
     [Header("Numbers")]
     // Values of stats to character 
@@ -36,6 +37,9 @@ public class EnemyBehavior : ScriptableObject
     public int animMelee = 10;
     public int animRange = 11;
 
-
+    public void Print()
+    {
+        Debug.Log(name + "noiseAmount:" + noiseAmount);
+    }
 
 }

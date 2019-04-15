@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 9150233022497076258}
   - component: {fileID: 9150233022497076259}
   m_Layer: 0
-  m_Name: Wepeon
+  m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  animator: {fileID: 9150233022505273156}
-  rb2d: {fileID: 9150233022505273153}
 --- !u!70 &9150233022505273152
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

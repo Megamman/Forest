@@ -10,48 +10,42 @@ public class Enemy : MonoBehaviour
     //If rangeAttack = True
     public GameObject projectile;
 
+    [SerializeField]
+    private Transform enemyGraphic;
+
     private Transform player;
+
     public Animator anim;
+
     public Rigidbody2D rb2d;
+
+    private int health;
+
 
     // Start is called before the first frame update
     void Start()
     {
 
-        behavior.timeAttack = behavior.startTimeBtwAttack;
+        player = GameObject.FindWithTag("Player").transform;
+        health = behavior.health;
         
     }
 
     void Update()
     {
-        player = GameObject.FindWithTag("Player").transform;
-    }
-
-    void Move()
-    {
-
-        if (Vector2.Distance(transform.position, player.position) > behavior.stoppingDist)
+        behavior.timeAttack -= Time.deltaTime;
+        if (behavior.timeAttack < 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);
-            
-        }
-        /** else if (Vector2.Distance(transform.position, player.position) < behavior.stoppingDist && Vector2.Distance(transform.position, player.position) > behavior.retreatDist)
-        {
-            transform.position = this.transform.position;
-        }*/
-        else if (Vector2.Distance(transform.position, player.position) < behavior.retreatDist)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.speed * Time.deltaTime);
-            Debug.Log("moving");
+            behavior.timeAttack = behavior.startTimeBtwAttack;
         }
 
-        if (behavior.noise == true)
+        Move();
+        
+        if (behavior.noise)
         {
             Vector2 pos = Random.insideUnitCircle * behavior.noiseAmount;
-            transform.localPosition = Vector2.Lerp(transform.localPosition, pos, Time.deltaTime);
+            enemyGraphic.localPosition = Vector2.Lerp(enemyGraphic.localPosition, pos, Time.deltaTime);
         }
-
-        rb2d.velocity = new Vector2();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -59,7 +53,6 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Attack();
-            Move();
         }
     }
 
@@ -69,12 +62,32 @@ public class Enemy : MonoBehaviour
         Debug.Log("idle");
     }
 
+    void Move()
+    {
+
+        if (Vector2.Distance(transform.position, player.position) > behavior.stoppingDist)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);
+            Attack();
+            
+        }
+        else if (Vector2.Distance(transform.position, player.position) < behavior.retreatDist)
+        {
+
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.speed * Time.deltaTime);
+            
+        }
+        
+
+        rb2d.velocity = new Vector2();
+    }
+
 
     // Update is called once per frame
     void Attack()
     {
 
-        if (behavior.rangeAttack == true)
+        if (behavior.rangeAttack)
         {
 
             if (behavior.timeAttack <= 0)
@@ -91,10 +104,11 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        if (behavior.meleeAttack == true)
+        if (behavior.meleeAttack)
         {
             if (behavior.timeAttack <= 0)
             {
+                Debug.Log("start ATTACK");
                 // this is when the enemie attacks
                 behavior.timeAttack -= Time.deltaTime;
                 anim.SetInteger("Idle", behavior.animMelee);
