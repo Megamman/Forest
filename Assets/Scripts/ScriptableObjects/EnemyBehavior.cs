@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Custom Data/Enemy Behavior", fileName = "New EnemyBehavior")]
 public class EnemyBehavior : ScriptableObject
 {
-    
+    [Header("Information")]
     public string name;
 
     [Header("Numbers")]
@@ -24,7 +24,6 @@ public class EnemyBehavior : ScriptableObject
 
     [Header("Actives")]
     // Use if() statments if true do this, else...
-    public bool keepDistance = true;
     public bool meleeAttack = true;
     public bool rangeAttack = true;
     // If agressive = false than there is no need a collider for ditection
@@ -34,8 +33,11 @@ public class EnemyBehavior : ScriptableObject
     [Header("Animation")]
     // Set the animations
     public int animIdle = 0;
+    public int animMove = 1;
     public int animMelee = 10;
     public int animRange = 11;
+    public int animHit = 12;
+    public int animDeath = 13;
 
     public void Print()
     {

@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     //Input of behavior and stats
     public EnemyBehavior behavior;
 
+    public GameObject attackArea;
+
     //If rangeAttack = True
     public GameObject projectile;
 
@@ -19,33 +21,51 @@ public class Enemy : MonoBehaviour
 
     public Rigidbody2D rb2d;
 
+    public SpriteRenderer renderer;
+
     private int health;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-
         player = GameObject.FindWithTag("Player").transform;
         health = behavior.health;
-        
+
+        attackArea.SetActive(false);
+
+    }
+
+    void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        Move();
+        Health();
+
+        float move = Input.GetAxis("Horizontal");
+
+        renderer.flipX = move < 0;
+
         behavior.timeAttack -= Time.deltaTime;
         if (behavior.timeAttack < 0)
         {
             behavior.timeAttack = behavior.startTimeBtwAttack;
         }
-
-        Move();
         
         if (behavior.noise)
         {
             Vector2 pos = Random.insideUnitCircle * behavior.noiseAmount;
             enemyGraphic.localPosition = Vector2.Lerp(enemyGraphic.localPosition, pos, Time.deltaTime);
         }
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -71,7 +91,7 @@ public class Enemy : MonoBehaviour
             Attack();
             
         }
-        else if (Vector2.Distance(transform.position, player.position) < behavior.retreatDist)
+        else if (Vector2.Distance(transform.position, player.position) < behavior.retreatDist) 
         {
 
             transform.position = Vector2.MoveTowards(transform.position, player.position, -behavior.speed * Time.deltaTime);
@@ -109,6 +129,7 @@ public class Enemy : MonoBehaviour
             if (behavior.timeAttack <= 0)
             {
                 Debug.Log("start ATTACK");
+                attackArea.SetActive(true);
                 // this is when the enemie attacks
                 behavior.timeAttack -= Time.deltaTime;
                 anim.SetInteger("Idle", behavior.animMelee);
@@ -117,10 +138,20 @@ public class Enemy : MonoBehaviour
             else
             {
                 Debug.Log("start timer");
+                attackArea.SetActive(false);
                 behavior.timeAttack -= Time.deltaTime;
                 anim.SetInteger("Idle", behavior.animIdle);
             }
         }
         
     }
+
+    void Health()
+    {
+        if(behavior.health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

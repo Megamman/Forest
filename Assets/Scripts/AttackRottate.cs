@@ -10,7 +10,6 @@ public class AttackRottate : MonoBehaviour
     void Update()
     {
         mouseDir();
-
     }
 
     void mouseDir()

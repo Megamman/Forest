@@ -644,9 +644,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AttackRottate.cs" />
     <Compile Include="Assets\Scripts\AttackTrail.cs" />
-    <Compile Include="Assets\Scripts\Behavior\Enemy.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehavior\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyDeath.cs" />
     <Compile Include="Assets\Scripts\Enemyhit.cs" />
     <Compile Include="Assets\Scripts\Fly_Range.cs" />
@@ -654,6 +654,7 @@
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\WeaponBehaviour.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\ToLevel.cs" />
     <Compile Include="Assets\Scripts\TopViewMove.cs" />

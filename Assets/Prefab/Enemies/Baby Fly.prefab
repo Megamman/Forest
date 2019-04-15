@@ -84,10 +84,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 11400000, guid: 86c3f1fe7c7933946873af41f3e7878f, type: 2}
+  attackArea: {fileID: 0}
   projectile: {fileID: 0}
   enemyGraphic: {fileID: 7631553419467896922}
   anim: {fileID: 5654251162709725217}
   rb2d: {fileID: 4683583768483419452}
+  renderer: {fileID: 5654251162709725216}
 --- !u!1 &5654251162709725213
 GameObject:
   m_ObjectHideFlags: 0

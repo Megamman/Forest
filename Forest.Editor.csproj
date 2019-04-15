@@ -724,6 +724,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\EnemyEditor.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
     <Compile Include="Assets\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Group Brush\Scripts\Editor\GroupBrush.cs" />
