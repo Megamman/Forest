@@ -15,19 +15,12 @@ MonoBehaviour:
   name: Baby Fly
   health: 1
   speed: 9
-  noiseAmount: 0.5
   damage: 0.5
-  timeAttack: 0.40381315
   startTimeBtwAttack: 1
+  detectDist: 5
   stoppingDist: 1.5
-  retreatDist: 2
-  keepDistance: 1
+  _retreatDiff: 0.5
+  noiseAmount: 0.5
   meleeAttack: 0
   rangeAttack: 0
-  aggressive: 1
   noise: 1
-  animIdle: 0
-  animMelee: 10
-  animRange: 11
-  animHit: 12
-  animDeath: 13

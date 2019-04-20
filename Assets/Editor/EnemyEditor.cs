@@ -19,5 +19,8 @@ public class EnemyEditor : Editor
         
         Handles.color = Color.red;
         Handles.DrawWireDisc(enemy.transform.position, Vector3.forward, behavior.retreatDist);
+
+        Handles.color = Color.green;
+        Handles.DrawWireDisc(enemy.transform.position, Vector3.forward, behavior.detectDist);
     }
 }

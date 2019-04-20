@@ -12,32 +12,35 @@ public class EnemyBehavior : ScriptableObject
     // Values of stats to character 
     public int health;
     public float speed = 8f;
-    public float noiseAmount;
     public float damage;
 
     // Attack
-    public float timeAttack;
     public float startTimeBtwAttack;
-    // If rangeAttack = True
+
+    [Header("Distince")]
+    public float detectDist;
     public float stoppingDist;
-    public float retreatDist;
+
+    [SerializeField]
+    private float _retreatDiff;
+
+    public float retreatDist
+    {
+        get
+        {
+            return stoppingDist - _retreatDiff;
+        }
+    }
+
+    [Header("Other")]
+    public float noiseAmount;
 
     [Header("Actives")]
     // Use if() statments if true do this, else...
     public bool meleeAttack = true;
     public bool rangeAttack = true;
     // If agressive = false than there is no need a collider for ditection
-    public bool aggressive = true;
     public bool noise = false;
-
-    [Header("Animation")]
-    // Set the animations
-    public int animIdle = 0;
-    public int animMove = 1;
-    public int animMelee = 10;
-    public int animRange = 11;
-    public int animHit = 12;
-    public int animDeath = 13;
 
     public void Print()
     {
