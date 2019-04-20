@@ -8,6 +8,8 @@ public class Interaction : MonoBehaviour
     public GameObject text;
     public GameObject dialogueBox;
 
+    public Dialogue dialogue;
+
     void Start () {
         text.SetActive(false);
         dialogueBox.SetActive(false);
@@ -29,6 +31,7 @@ public class Interaction : MonoBehaviour
         if (Input.GetButtonDown("Interaction") && text.activeInHierarchy == true) {
             text.SetActive(false);
             dialogueBox.SetActive(true);
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
 
     }

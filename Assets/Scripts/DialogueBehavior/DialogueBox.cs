@@ -10,11 +10,13 @@ public class DialogueBox : MonoBehaviour
     public Image Character;
     public Image Background;
 
+    public Text Name;
     public Text Dialogue;
 
     // Start is called before the first frame update
     void Start()
     {
+        Name.text = behavior.Name.ToString();
 
         Character.sprite = behavior.Character
             ;

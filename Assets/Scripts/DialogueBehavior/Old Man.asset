@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598521182b96f874ba0b28a28c155740, type: 3}
   m_Name: Old Man
   m_EditorClassIdentifier: 
+  Name: Adventurer
   Character: {fileID: 21300000, guid: 53f4d3d9b02466145af2eca14c933032, type: 3}
   Background: {fileID: 21300000, guid: ccc975759e52e9e429d522af5e296f5e, type: 3}
   Dialogue: hello

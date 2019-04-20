@@ -646,8 +646,10 @@
     <Compile Include="Assets\Scripts\Creatures\EnemyDeath.cs" />
     <Compile Include="Assets\Scripts\Creatures\Enemyhit.cs" />
     <Compile Include="Assets\Scripts\Creatures\ToTarget.cs" />
+    <Compile Include="Assets\Scripts\DialogueBehavior\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueBox.cs" />
-    <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueBehavior\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueBehavior\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\Enemy.cs" />
     <Compile Include="Assets\Scripts\Fly_Range.cs" />
     <Compile Include="Assets\Scripts\Interaction.cs" />

@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Custom Data/Dialogue Behavior", fileName = "New DialogueBehavior")]
 public class DialogueBehavior : ScriptableObject
 {
+    public string Name;
+
     public Sprite Character;
     public Sprite Background;
 
