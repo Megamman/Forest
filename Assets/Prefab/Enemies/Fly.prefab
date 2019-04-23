@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7789349828043270133}
   m_Layer: 0
   m_Name: Fly
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   anim: {fileID: 7483915855711073470}
   rb2d: {fileID: 7789349828043270133}
   renderer: {fileID: 6502089501836223174}
+  health: 0
 --- !u!70 &4137682822824716863
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

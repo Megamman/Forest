@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7293587663910817749}
   m_Layer: 0
   m_Name: Rat
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,6 +54,7 @@ MonoBehaviour:
   anim: {fileID: 7293587664124318338}
   rb2d: {fileID: 7293587663910817746}
   renderer: {fileID: 7293587664124318339}
+  health: 0
 --- !u!50 &7293587663910817746
 Rigidbody2D:
   serializedVersion: 4

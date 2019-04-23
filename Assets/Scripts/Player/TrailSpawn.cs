@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class TrailSpawn : MonoBehaviour
 {
-    public GameObject Trail;
+    public GameObject weapon;
+    public Transform attackPos;
+
+    private Animator anim;
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(Trail, transform.position, transform.rotation);
-            Trail.SetActive(true);
+            Instantiate(weapon, attackPos.position, transform.rotation);
+
         }
+
+        
     }
 }

@@ -24,17 +24,17 @@ public class Enemy : MonoBehaviour
 
     public SpriteRenderer renderer;
 
-    private int health;
+    public float health;
 
     private float timeAttack;
-
-
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         health = behavior.health;
+
+        
 
         //attackArea.SetActive(false);
     }
@@ -82,21 +82,31 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Attack()
     {
-        /*
-        if(behavior.rangeAttack && behavior.meleeAttack)
-        {
-            random.range
-        }*/
 
         if (timeAttack <= 0)
         {
-            if (behavior.rangeAttack)
+            if (behavior.rangeAttack && behavior.meleeAttack)
+            {
+                int rand = Random.Range(0, 2);
+                if (rand == 1)
+                {
+                    Debug.Log("Range ATTACK");
+                    Instantiate(projectile, transform.position, Quaternion.identity);
+                }
+                if (rand == 2)
+                {
+                    Debug.Log("start ATTACK");
+                    anim.SetTrigger("Melee Attack");
+                }
+            }
+
+            if (behavior.rangeAttack && !behavior.meleeAttack)
             {
                 Debug.Log("Range ATTACK");
                 Instantiate(projectile, transform.position, Quaternion.identity);
             }
 
-            if (behavior.meleeAttack)
+            if (behavior.meleeAttack && behavior.rangeAttack)
             {
                 Debug.Log("start ATTACK");
                 attackArea.SetActive(true);
@@ -122,7 +132,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Damage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
 

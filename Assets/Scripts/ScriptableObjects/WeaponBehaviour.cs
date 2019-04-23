@@ -11,10 +11,17 @@ public class WeaponBehaviour : ScriptableObject
 
     [Header("Numbers")]
     public float damage;
-    public float speed;
-    public float timeAttack;
+    public float btwAttack;
 
-    [Header("Visuals")]
-    public GameObject attackMove;
+    /*
+    [Header("Position")]
+    public Transform attackPos;
+
+    [Header("Weapon")]
+    public GameObject weapon;
+    */
+
+    // [Header("Visuals")]
+    //public GameObject attackMove;
 
 }
