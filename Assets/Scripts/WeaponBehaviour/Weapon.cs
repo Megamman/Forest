@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 
     public GameObject wepeon;
 
-    public float timeAttack;
+    private float timeAttack;
 
     public Transform attackPos;
 

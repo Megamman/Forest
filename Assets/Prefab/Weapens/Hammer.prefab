@@ -1030,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7260361246347911728}
   - component: {fileID: 5502694758578416576}
+  - component: {fileID: 510314528441083156}
   m_Layer: 0
   m_Name: Hammer
   m_TagString: Untagged
@@ -1061,10 +1062,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 5502694758578416575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd5152f6abb2574a865a5c254151af7, type: 3}
+  m_Script: {fileID: 11500000, guid: 97ded51fd86557b4b83cbf612b108bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.3
+  timer: 0.5
+--- !u!114 &510314528441083156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502694758578416575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dd99d9e2368f74c929dd70b073e5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavior: {fileID: 11400000, guid: 87cea3635d432c548a11f16cf8f13159, type: 2}
+  wepeon: {fileID: 149579313007419385}
+  attackPos: {fileID: 0}
 --- !u!1 &7602831340139208814
 GameObject:
   m_ObjectHideFlags: 0
