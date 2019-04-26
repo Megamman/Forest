@@ -18,8 +18,8 @@ public class DialogueBox : MonoBehaviour
     {
         Name.text = behavior.Name.ToString();
 
-        Character.sprite = behavior.Character
-            ;
+        Character.sprite = behavior.Character;
+        
         Background.sprite = behavior.Background;
 
         Dialogue.text = behavior.Dialogue.ToString();
