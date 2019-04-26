@@ -63,10 +63,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   dialogueBox: {fileID: 0}
-  dialogue:
-    name: 
-    sentences: []
-  anim: {fileID: 0}
 --- !u!1 &4300722568768853549
 GameObject:
   m_ObjectHideFlags: 0

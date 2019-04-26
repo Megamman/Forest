@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("Hit");
             Debug.Log("Hit!!");
 
-        }//when 
+        }
     }
 
     public void TakeDamage(float damage)

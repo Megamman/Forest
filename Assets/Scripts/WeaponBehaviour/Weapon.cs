@@ -7,13 +7,11 @@ public class Weapon : MonoBehaviour
 
     public WeaponBehaviour behavior;
 
-    public GameObject weapon;
+    public GameObject wepeon;
 
-    public float timeAttack;
+    private float timeAttack;
 
     public Transform attackPos;
-
-    public bool activeAttack = false;
 
     void Start()
     {
@@ -22,28 +20,26 @@ public class Weapon : MonoBehaviour
         //Debug.Log(attackPos.position);
     }
 
-    public void Timer()
-    {
-        timeAttack -= Time.deltaTime;
-    }
-
-    public void Attack()
+    private void Update()
     {
         if (timeAttack <= 0)
         {
-            activeAttack = true;
-            Instantiate(weapon, attackPos.position, Quaternion.identity);
+            Attack();
         }
         else
-        {   
-            activeAttack = false;
+        {
+            timeAttack -= Time.deltaTime;
         }
 
-        if (activeAttack)
+    }
+
+    void Attack()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
+            Instantiate(wepeon, attackPos.position, transform.rotation);
             timeAttack = behavior.btwAttack;
         }
-        
     }
 
 }
