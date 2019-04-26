@@ -662,6 +662,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\DialogueBehavior.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponBehaviour.cs" />
+    <Compile Include="Assets\Scripts\WaypointMove.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Arrow.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Bullet.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Damage.cs" />
