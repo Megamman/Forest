@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class Interaction : MonoBehaviour
 {
     public GameObject text;
-    public GameObject dialogueBox;
+    public GameObject dialoguebox;
 
     public Dialogue dialogue;
 
     void Start () {
         text.SetActive(false);
-        dialogueBox.SetActive(false);
+        
+        dialoguebox.GetComponent<BoxMovement>().moveOut();
     }
+
 
 
 
@@ -30,15 +32,15 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetButtonDown("Interaction") && text.activeInHierarchy == true) {
             text.SetActive(false);
-            dialogueBox.SetActive(true);
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            dialoguebox.GetComponent<BoxMovement>().moveIn();
+            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
 
     }
 
     void OnTriggerExit2D () {
         text.SetActive(false);
-        dialogueBox.SetActive(false);
+        dialoguebox.GetComponent<BoxMovement>().moveOut();
     }
     
 }

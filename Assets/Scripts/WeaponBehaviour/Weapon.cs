@@ -7,11 +7,9 @@ public class Weapon : MonoBehaviour
 
     public WeaponBehaviour behavior;
 
-    public GameObject wepeon;
+    public GameObject weapeonSwitch;
 
     private float timeAttack;
-
-    public Transform attackPos;
 
     void Start()
     {
@@ -20,26 +18,19 @@ public class Weapon : MonoBehaviour
         //Debug.Log(attackPos.position);
     }
 
-    private void Update()
-    {
-        if (timeAttack <= 0)
-        {
-            Attack();
-        }
-        else
-        {
-            timeAttack -= Time.deltaTime;
-        }
 
-    }
-
-    void Attack()
+    public void Attack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && timeAttack <= 0)
         {
-            Instantiate(wepeon, attackPos.position, transform.rotation);
+            weapeonSwitch.GetComponent<WeaponSwitch>().Attack();
             timeAttack = behavior.btwAttack;
         }
+    }
+
+    public void Timer()
+    {
+        timeAttack -= Time.deltaTime;
     }
 
 }

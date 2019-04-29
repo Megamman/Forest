@@ -90,6 +90,7 @@ MonoBehaviour:
   anim: {fileID: 5654251162709725217}
   rb2d: {fileID: 4683583768483419452}
   renderer: {fileID: 5654251162709725216}
+  health: 0
 --- !u!1 &5654251162709725213
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +102,6 @@ GameObject:
   - component: {fileID: 5654251162709725212}
   - component: {fileID: 5654251162709725216}
   - component: {fileID: 5654251162709725217}
-  - component: {fileID: 5911146602977737051}
   m_Layer: 0
   m_Name: Baby_Fly
   m_TagString: Untagged
@@ -190,22 +190,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &5911146602977737051
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654251162709725213}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 70
 --- !u!1 &6701077241624507558
 GameObject:
   m_ObjectHideFlags: 0

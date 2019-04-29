@@ -20,7 +20,7 @@ MonoBehaviour:
   detectDist: 5
   stoppingDist: 1.5
   _retreatDiff: 0.5
-  noiseAmount: 100
+  noiseAmount: 10
   meleeAttack: 0
   rangeAttack: 0
   noise: 1
