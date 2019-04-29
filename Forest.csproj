@@ -645,6 +645,7 @@
     <Compile Include="Assets\Scripts\Creatures\EnemyDeath.cs" />
     <Compile Include="Assets\Scripts\Creatures\Enemyhit.cs" />
     <Compile Include="Assets\Scripts\Creatures\ToTarget.cs" />
+    <Compile Include="Assets\Scripts\DialogueBehavior\BoxMovement.cs" />
     <Compile Include="Assets\Scripts\DialogueBehavior\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueBox.cs" />
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueManager.cs" />
@@ -671,6 +672,8 @@
     <Compile Include="Assets\Scripts\WeaponBehaviour\WeaponSwitch.cs" />
     <Compile Include="Assets\Scripts\World\Camera.cs" />
     <Compile Include="Assets\Scripts\World\QuitGame.cs" />
+    <Compile Include="Assets\Scripts\World\Restart.cs" />
+    <Compile Include="Assets\Scripts\World\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\World\Teleport.cs" />
     <Compile Include="Assets\Scripts\World\ToLevel.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
