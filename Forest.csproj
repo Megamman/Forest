@@ -651,7 +651,10 @@
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Extra\ActiveDeactive.cs" />
+    <Compile Include="Assets\Scripts\Extra\WaypointMove.cs" />
     <Compile Include="Assets\Scripts\Fly_Range.cs" />
+    <Compile Include="Assets\Scripts\Generation\Generation_1.cs" />
     <Compile Include="Assets\Scripts\Interaction.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
@@ -663,7 +666,6 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\DialogueBehavior.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponBehaviour.cs" />
-    <Compile Include="Assets\Scripts\WaypointMove.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Arrow.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Bullet.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Damage.cs" />
@@ -673,6 +675,7 @@
     <Compile Include="Assets\Scripts\World\Camera.cs" />
     <Compile Include="Assets\Scripts\World\QuitGame.cs" />
     <Compile Include="Assets\Scripts\World\Restart.cs" />
+    <Compile Include="Assets\Scripts\World\SpawnGround.cs" />
     <Compile Include="Assets\Scripts\World\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\World\Teleport.cs" />
     <Compile Include="Assets\Scripts\World\ToLevel.cs" />

@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 504304195}
   - component: {fileID: 504304193}
   - component: {fileID: 504304194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,29 +402,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 28.52018, y: 20.873371}
   m_EdgeRadius: 0
---- !u!114 &852750063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263099108659091034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac34054f7cba3ba4783bb422fa4d3274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 8292267818191537743, guid: 73de178f1d1920c4db0f423c0efad00e, type: 3}
-  trees:
-  - {fileID: 4081026595685937854, guid: f3e9b60e4792c87429c4e9b882d076ab, type: 3}
-  - {fileID: 6613625354549837060, guid: 57b1f08c7021eb1468ab9cb56a5ff495, type: 3}
-  - {fileID: 4317234688787771415, guid: 5cba86cebffcb304998806e48f90b242, type: 3}
-  doors:
-  - {fileID: 7360393484780665538, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
-  - {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
-  - {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a, type: 3}
-  - {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
 --- !u!1001 &1068792974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -791,8 +768,7 @@ GameObject:
   - component: {fileID: 8337443617635565069}
   - component: {fileID: 5393852875429207226}
   - component: {fileID: 852750060}
-  - component: {fileID: 852750063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -886,11 +862,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Door
       objectReference: {fileID: 0}
-    - target: {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2457514473649465755, guid: 00f545e496a48894bbbda6535371292a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -951,11 +922,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 2031950395}
-    - target: {fileID: 6176735778678413453, guid: 00f545e496a48894bbbda6535371292a,
+    - target: {fileID: 641367613911571959, guid: 00f545e496a48894bbbda6535371292a,
         type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2031950395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f545e496a48894bbbda6535371292a, type: 3}
 --- !u!483693784 &2758973212926880697
@@ -9923,7 +9894,7 @@ GameObject:
   - component: {fileID: 5694950223958381254}
   - component: {fileID: 391379061441377819}
   - component: {fileID: 5089981697734476663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10025,7 +9996,7 @@ GameObject:
   - component: {fileID: 4179735165567562747}
   - component: {fileID: 2758973212926880697}
   - component: {fileID: 3188670750569596697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10043,11 +10014,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Left Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624339990215297277, guid: 772e4d741be1dad4f8636a41177331be,
         type: 3}
@@ -10109,6 +10075,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 2031950395}
+    - target: {fileID: 3203909824431678117, guid: 772e4d741be1dad4f8636a41177331be,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2031950395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
 --- !u!50 &6798676601086819532
@@ -10144,7 +10115,7 @@ GameObject:
   - component: {fileID: 2425285584504738133}
   - component: {fileID: 6798676601086819532}
   - component: {fileID: 6966980955442849474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bottem Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10175,7 +10146,7 @@ GameObject:
   - component: {fileID: 4642082713345864228}
   - component: {fileID: 4057819286162218650}
   - component: {fileID: 7036804638510709430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10238,11 +10209,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottem Door
       objectReference: {fileID: 0}
-    - target: {fileID: 7360393484780665538, guid: e081dc87fbc38644abcd424f1858bd6f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7360393484780665549, guid: e081dc87fbc38644abcd424f1858bd6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10303,6 +10269,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 2031950395}
+    - target: {fileID: 1534204100520983100, guid: e081dc87fbc38644abcd424f1858bd6f,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2031950395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
 --- !u!4 &7880845993484148346
@@ -10329,7 +10300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8943742397095237085}
   - component: {fileID: 4527418947329318471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26230,13 +26201,37 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4897221672246118175}
-  m_Layer: 0
+  - component: {fileID: 8626305241152636012}
+  m_Layer: 9
   m_Name: Ground Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8626305241152636012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626305241152636011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac34054f7cba3ba4783bb422fa4d3274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 8292267818191537743, guid: 73de178f1d1920c4db0f423c0efad00e, type: 3}
+  trees:
+  - {fileID: 4081026595685937854, guid: f3e9b60e4792c87429c4e9b882d076ab, type: 3}
+  - {fileID: 6613625354549837060, guid: 57b1f08c7021eb1468ab9cb56a5ff495, type: 3}
+  - {fileID: 4317234688787771415, guid: 5cba86cebffcb304998806e48f90b242, type: 3}
+  doors:
+  - {fileID: 7360393484780665538, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
+  - {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
+  - {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a, type: 3}
+  - {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
 --- !u!4 &8943742397095237085
 Transform:
   m_ObjectHideFlags: 0
@@ -26264,11 +26259,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Top Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139753892791245701, guid: 6df41185d7d3a0947b175fc55964bddb,
         type: 3}
@@ -26326,6 +26316,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9139753893033169721, guid: 6df41185d7d3a0947b175fc55964bddb,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2031950395}
+    - target: {fileID: 9182186640578689660, guid: 6df41185d7d3a0947b175fc55964bddb,
         type: 3}
       propertyPath: Player
       value: 

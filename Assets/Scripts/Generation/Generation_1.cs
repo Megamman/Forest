@@ -57,9 +57,9 @@ public class Generation_1 : MonoBehaviour
         Instantiate(trees[treeRand], transform.position, transform.rotation);
     }
 
-    void GenDoors()
+    public void GenDoors()
     {
-        int doorRand = Random.Range(0, 3);
+        int doorRand = Random.Range(0, 5);
 
         if (doorRand > 1)
         {

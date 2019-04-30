@@ -11,7 +11,9 @@ public class SpawnGround : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 
-        Invoke("Ground", 0.1f);
+        Invoke("Ground", 0.5f);
+
+        Destroy(gameObject, 2f);
     }
 
     void OnTriggerEnter2D (Collider2D other)
@@ -27,11 +29,11 @@ public class SpawnGround : MonoBehaviour
         if (foundGround)
         {
             Destroy(gameObject);
+            ground.GetComponent<Generation_1>().GenDoors();
         } else {
             Instantiate(ground, transform.position, transform.rotation);
         }
 
-        Destroy(gameObject, 4f);
     }
 
 }

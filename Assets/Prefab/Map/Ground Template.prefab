@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1026440827}
   - component: {fileID: 1026440825}
   - component: {fileID: 1026440826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf32b2f4d049ab4fb11b9443e82aefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorWay: {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
 --- !u!1 &263099109248465506
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +104,7 @@ GameObject:
   - component: {fileID: 8337443617151046197}
   - component: {fileID: 5393852875947143298}
   - component: {fileID: 301122260}
-  - component: {fileID: 301122263}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16087,31 +16085,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 28.52018, y: 20.873371}
   m_EdgeRadius: 0
---- !u!114 &301122263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263099109248465506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac34054f7cba3ba4783bb422fa4d3274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 2125651164493425371, guid: 1809baa3bca73e841a73969834083dca, type: 3}
-  - {fileID: 7264115949812303038, guid: 7569d0b579d2ddd44ac633b0f92167c1, type: 3}
-  - {fileID: 2837999217812484673, guid: 4f6dce9d7063d904f80a5369ca098df0, type: 3}
-  trees:
-  - {fileID: 4081026595685937854, guid: f3e9b60e4792c87429c4e9b882d076ab, type: 3}
-  - {fileID: 6613625354549837060, guid: 57b1f08c7021eb1468ab9cb56a5ff495, type: 3}
-  - {fileID: 4317234688787771415, guid: 5cba86cebffcb304998806e48f90b242, type: 3}
-  doors:
-  - {fileID: 7360393484780665538, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
-  - {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
-  - {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a, type: 3}
-  - {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
 --- !u!1 &5089981698252549966
 GameObject:
   m_ObjectHideFlags: 0
@@ -16124,7 +16097,7 @@ GameObject:
   - component: {fileID: 5694950223474015998}
   - component: {fileID: 391379061992856099}
   - component: {fileID: 5089981698252549967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16204,7 +16177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf32b2f4d049ab4fb11b9443e82aefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorWay: {fileID: 4302403951270483147, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
 --- !u!1 &6209131259032874434
 GameObject:
   m_ObjectHideFlags: 0
@@ -16218,7 +16190,7 @@ GameObject:
   - component: {fileID: 2758973212408809345}
   - component: {fileID: 8031514857412851167}
   - component: {fileID: 3188670751121091361}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25156,7 +25128,7 @@ GameObject:
   - component: {fileID: 2425285583919578477}
   - component: {fileID: 6798676601609064692}
   - component: {fileID: 6966980954891225850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bottem Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25236,7 +25208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf32b2f4d049ab4fb11b9443e82aefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorWay: {fileID: 1577424467498850447, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
 --- !u!1 &7036804639100065421
 GameObject:
   m_ObjectHideFlags: 0
@@ -25249,7 +25220,7 @@ GameObject:
   - component: {fileID: 4642082713863921180}
   - component: {fileID: 4057819285606412962}
   - component: {fileID: 7036804639100065422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25329,7 +25300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf32b2f4d049ab4fb11b9443e82aefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorWay: {fileID: 4215007853186041063, guid: 00f545e496a48894bbbda6535371292a, type: 3}
 --- !u!1 &8219718281136778715
 GameObject:
   m_ObjectHideFlags: 0
@@ -25340,7 +25310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8943742396573120997}
   - component: {fileID: 4527418947914363519}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25384,7 +25354,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4897221672835361575}
-  m_Layer: 0
+  - component: {fileID: 8283021089908393973}
+  m_Layer: 9
   m_Name: Ground Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25406,3 +25377,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8283021089908393973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626305240596965459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac34054f7cba3ba4783bb422fa4d3274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 2125651164493425371, guid: 1809baa3bca73e841a73969834083dca, type: 3}
+  - {fileID: 7264115949812303038, guid: 7569d0b579d2ddd44ac633b0f92167c1, type: 3}
+  - {fileID: 2837999217812484673, guid: 4f6dce9d7063d904f80a5369ca098df0, type: 3}
+  trees:
+  - {fileID: 4081026595685937854, guid: f3e9b60e4792c87429c4e9b882d076ab, type: 3}
+  - {fileID: 6613625354549837060, guid: 57b1f08c7021eb1468ab9cb56a5ff495, type: 3}
+  - {fileID: 4317234688787771415, guid: 5cba86cebffcb304998806e48f90b242, type: 3}
+  doors:
+  - {fileID: 7360393484780665538, guid: e081dc87fbc38644abcd424f1858bd6f, type: 3}
+  - {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
+  - {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a, type: 3}
+  - {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
