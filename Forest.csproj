@@ -652,6 +652,7 @@
     <Compile Include="Assets\Scripts\DialogueBehavior\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\Enemy.cs" />
     <Compile Include="Assets\Scripts\Extra\ActiveDeactive.cs" />
+    <Compile Include="Assets\Scripts\Extra\Doors.cs" />
     <Compile Include="Assets\Scripts\Extra\WaypointMove.cs" />
     <Compile Include="Assets\Scripts\Fly_Range.cs" />
     <Compile Include="Assets\Scripts\Generation\Generation_1.cs" />
@@ -672,7 +673,11 @@
     <Compile Include="Assets\Scripts\WeaponBehaviour\Die.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Weapon.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\WeaponSwitch.cs" />
+    <Compile Include="Assets\Scripts\World\AddRoom.cs" />
     <Compile Include="Assets\Scripts\World\Camera.cs" />
+    <Compile Include="Assets\Scripts\World\CameraTP.cs" />
+    <Compile Include="Assets\Scripts\World\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\World\MenuManager.cs" />
     <Compile Include="Assets\Scripts\World\QuitGame.cs" />
     <Compile Include="Assets\Scripts\World\Restart.cs" />
     <Compile Include="Assets\Scripts\World\SpawnGround.cs" />

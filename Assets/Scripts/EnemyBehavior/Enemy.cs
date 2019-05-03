@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
 
     private float timeAttack;
 
+    public GameObject[] drop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,7 +98,7 @@ public class Enemy : MonoBehaviour
                 if (rand == 2)
                 {
                     Debug.Log("start ATTACK");
-                    anim.SetTrigger("Melee Attack");
+                    anim.SetBool("Melee Attack", true);
                 }
             }
 
@@ -106,11 +108,11 @@ public class Enemy : MonoBehaviour
                 Instantiate(projectile, transform.position, Quaternion.identity);
             }
 
-            if (behavior.meleeAttack && behavior.rangeAttack)
+            if (behavior.meleeAttack && !behavior.rangeAttack)
             {
                 Debug.Log("start ATTACK");
                 attackArea.SetActive(true);
-                anim.SetTrigger("Melee Attack");
+                anim.SetBool("Melee Attack", true);
             }
 
             timeAttack = behavior.startTimeBtwAttack;
@@ -139,6 +141,9 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+
+            int dropRand = Random.Range(0, drop.Length);
+            Instantiate(drop[dropRand], transform.position, transform.rotation);
         }
     }
 

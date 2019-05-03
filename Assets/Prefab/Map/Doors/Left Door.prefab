@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 603681835326517049}
   - component: {fileID: 3203909824431678117}
   - component: {fileID: 3234842625459953016}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Right TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 524384033147914237}
   - component: {fileID: 4906116566366101226}
   - component: {fileID: 5547484818201498241}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Right Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -892,7 +892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6624339990215297277}
   - component: {fileID: 6624339990215297276}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Left Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,9 @@ GameObject:
   - component: {fileID: 6624339990505405565}
   - component: {fileID: 6624339990505405566}
   - component: {fileID: 55500655692204054}
-  m_Layer: 10
+  - component: {fileID: 3322061734996767925}
+  - component: {fileID: 1508028718185452469}
+  m_Layer: 0
   m_Name: Left Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -1712,7 +1714,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1747,6 +1749,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.9787903, y: 5.0903587}
   m_EdgeRadius: 0
+--- !u!114 &3322061734996767925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6624339990505405536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad194f7c6ba6c59479047fb9f7fe14c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1508028718185452469
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6624339990505405536}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6624339990616817951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1793,7 @@ GameObject:
   - component: {fileID: 6624339990616817950}
   - component: {fileID: 6624339990616817948}
   - component: {fileID: 6624339990616817949}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Left TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1830,7 +1865,7 @@ GameObject:
   - component: {fileID: 6624339991061194761}
   - component: {fileID: 6624339991061194759}
   - component: {fileID: 6624339991061194760}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Left Spawn Room
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1864,6 +1899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 8626305240596965459, guid: 9955e320133165f448c40a955415eda0, type: 3}
+  door: {fileID: 6624339990215297278}
 --- !u!61 &6624339991061194760
 BoxCollider2D:
   m_ObjectHideFlags: 0

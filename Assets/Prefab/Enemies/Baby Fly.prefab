@@ -44,7 +44,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07, y: -0.05}
@@ -91,6 +91,9 @@ MonoBehaviour:
   rb2d: {fileID: 4683583768483419452}
   renderer: {fileID: 5654251162709725216}
   health: 0
+  drop:
+  - {fileID: 0}
+  - {fileID: 1627102435627363341, guid: d5c193857991ee540baef0afed98238a, type: 3}
 --- !u!1 &5654251162709725213
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9e0d586fa504b7446907b763bad83213, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

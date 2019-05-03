@@ -13,6 +13,8 @@ public class ToLevel : MonoBehaviour
     public Slider slider;
     public Text progressText;
 
+    public Animator trees;
+
     //private IEnumerator LoadAsynchronously;
 
     void Start () {
@@ -36,6 +38,8 @@ public class ToLevel : MonoBehaviour
             text.SetActive(false);
             //SceneManager.LoadScene(levelName);
 
+            trees.SetBool("ChangeScene", true);
+
             StartCoroutine(LoadAsynchronously());
         }
 
@@ -56,6 +60,7 @@ public class ToLevel : MonoBehaviour
 
             yield return null;
         }
+        if (operation.isDone) trees.SetBool("ChangeScene", false);
     }
 
     void OnTriggerExit2D () {

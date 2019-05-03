@@ -10,6 +10,7 @@ TagManager:
   - AttackPos
   - Paths
   - Ground
+  - Rooms
   layers:
   - Default
   - TransparentFX

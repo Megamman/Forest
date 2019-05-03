@@ -5,31 +5,11 @@ using UnityEngine;
 public class ActiveDeactive : MonoBehaviour
 {
 
-    private bool path = true;
-
-    void update() 
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(path){
-            this.gameObject.SetActive(false);
-        }else {
-            this.gameObject.SetActive(true);
-        }
-
-        // if(doorWay.active) 
-        //     {
-        //         this.gameObject.SetActive(false);
-        //     }else {
-        //         this.gameObject.SetActive(true);
-        //     }
-    }
-
-    void OnTriggerEnter2D(Collider2D other) {
-
-        if (other.CompareTag("Paths"))
+        if (other.gameObject.tag == "Paths")
         {
-            path = true;
-        } else {
-            path = false;
+            Destroy(gameObject);
         }
     }
 }

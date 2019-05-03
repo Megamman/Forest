@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnGround : MonoBehaviour
 {
     public GameObject ground;
+    public GameObject door;
 
     private bool foundGround = false;
 
@@ -28,8 +29,8 @@ public class SpawnGround : MonoBehaviour
     {
         if (foundGround)
         {
-            Destroy(gameObject);
-            ground.GetComponent<Generation_1>().GenDoors();
+            Destroy(door);
+            ground.GetComponent<Generation_1>().GenDoor();
         } else {
             Instantiate(ground, transform.position, transform.rotation);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Generation_1 : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Generation_1 : MonoBehaviour
     public GameObject[] trees;
     public GameObject[] doors;
 
-
+    //public List<GameObject> rooms;
 
     private bool foundEnemy = true;
 
@@ -63,9 +64,15 @@ public class Generation_1 : MonoBehaviour
 
         if (doorRand > 1)
         {
-            int pathRand = Random.Range(0, doors.Length);
-            Instantiate(doors[pathRand], transform.position, transform.rotation);
+            GenDoor();
         }
+
+    }
+
+    public void GenDoor()
+    {
+        int pathRand = Random.Range(0, doors.Length);
+        Instantiate(doors[pathRand], transform.position, transform.rotation);
     }
 
 }
