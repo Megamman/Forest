@@ -6,16 +6,44 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public List<GameObject> rooms;
+    // can be accessed but not edited by all classes in the project.
+    public static LevelManager Instance { get; private set; }
 
-    // Start is called before the first frame update
-    void Start()
+    private List<GameObject> _rooms;
+
+    public List<GameObject> rooms
     {
+        get
+        {
+            if (_rooms == null) _rooms = new List<GameObject>();
+            return _rooms;
+        }
+        set
+        {
+            _rooms = value;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        // If there is no other levelmanager, this is the chosen one.
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            // there is already a level manager, erase this new one.
+            DestroyImmediate(this);
+        }
+    }
+
+    // when the level manager is destroyed, we need to remove the instance as well.
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 }

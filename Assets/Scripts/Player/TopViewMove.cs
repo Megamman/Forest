@@ -39,4 +39,24 @@ public class TopViewMove : MonoBehaviour
         rb2d.velocity = new Vector2(movement.x, movement.y);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Paths")
+        {
+            Teleport teleportScript = other.GetComponentInChildren<Teleport>();
+            if (teleportScript == null) return;
+
+            teleportScript.TeleportObject(gameObject);
+        }
+        
+        // CAN BREAK: IF IT TRIGGERS ANYTHING ELSE, CHANGE THE TO LEVEL OBJECT.
+        if (other.tag == "Teleport")
+        {
+            ToLevel toLevelScript = other.GetComponentInChildren<ToLevel>();
+            if (toLevelScript == null) return;
+
+            toLevelScript.ShowDialogue();
+        }
+    }
+
 }

@@ -68919,7 +68919,7 @@ GameObject:
   - component: {fileID: 381942584}
   m_Layer: 0
   m_Name: To the Forest
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148748,12 +148748,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1498846457117314693, guid: 52b118512bfb383479dad61345230a7c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498846455697709377, guid: 52b118512bfb383479dad61345230a7c,
+    - target: {fileID: 1498846455950828310, guid: 52b118512bfb383479dad61345230a7c,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -148873,16 +148868,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1498846457087578906, guid: 52b118512bfb383479dad61345230a7c,
-        type: 3}
-      propertyPath: In
-      value: 
-      objectReference: {fileID: 1199006}
-    - target: {fileID: 1498846457087578906, guid: 52b118512bfb383479dad61345230a7c,
-        type: 3}
-      propertyPath: Out
-      value: 
-      objectReference: {fileID: 936813664}
     - target: {fileID: 1498846456091289885, guid: 52b118512bfb383479dad61345230a7c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -148903,6 +148888,31 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1498846455697709377, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498846457117314693, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498846455697709375, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498846457087578906, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: In
+      value: 
+      objectReference: {fileID: 1199006}
+    - target: {fileID: 1498846457087578906, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: Out
+      value: 
+      objectReference: {fileID: 936813664}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b118512bfb383479dad61345230a7c, type: 3}
 --- !u!1001 &4300722567781124594
@@ -148979,7 +148989,7 @@ PrefabInstance:
       objectReference: {fileID: 934073210}
     - target: {fileID: 4300722568625613434, guid: a4663584ec0662a4195c3425d27f950c,
         type: 3}
-      propertyPath: dialogueBox
+      propertyPath: dialoguebox
       value: 
       objectReference: {fileID: 964071137}
     m_RemovedComponents: []
@@ -149213,6 +149223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9150233022505273211, guid: 316708bca7ee7ba4aa3b28e07afb7f60,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9150233022505273158, guid: 316708bca7ee7ba4aa3b28e07afb7f60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -149273,5 +149288,18 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 1288351352}
+    - target: {fileID: 1072838920, guid: 316708bca7ee7ba4aa3b28e07afb7f60, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150233022497076257, guid: 316708bca7ee7ba4aa3b28e07afb7f60,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491217831, guid: 316708bca7ee7ba4aa3b28e07afb7f60, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 316708bca7ee7ba4aa3b28e07afb7f60, type: 3}

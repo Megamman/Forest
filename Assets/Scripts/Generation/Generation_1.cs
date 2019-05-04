@@ -41,6 +41,11 @@ public class Generation_1 : MonoBehaviour
             foundEnemy = false;
             this.gameObject.SetActive(true);
         }
+
+        if (other.CompareTag("Ground"))
+        {
+            Destroy(this);
+        }
     }
 
     void GenEnemy()
@@ -48,14 +53,14 @@ public class Generation_1 : MonoBehaviour
         if(enemies.Length > 0)
         {
             int enemyRand = Random.Range(0, enemies.Length);
-            Instantiate(enemies[enemyRand], transform.position, transform.rotation);
+            Instantiate(enemies[enemyRand], transform.position, transform.rotation, transform);
         }
     }
 
     void GenTree()
     {
         int treeRand = Random.Range(0, trees.Length);
-        Instantiate(trees[treeRand], transform.position, transform.rotation);
+        Instantiate(trees[treeRand], transform.position, transform.rotation, transform);
     }
 
     public void GenDoors()
@@ -72,7 +77,7 @@ public class Generation_1 : MonoBehaviour
     public void GenDoor()
     {
         int pathRand = Random.Range(0, doors.Length);
-        Instantiate(doors[pathRand], transform.position, transform.rotation);
+        Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
     }
 
 }

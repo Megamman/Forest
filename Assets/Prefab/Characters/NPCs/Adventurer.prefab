@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  dialogueBox: {fileID: 0}
+  dialoguebox: {fileID: 0}
   dialogue:
     name: 
     sentences: []

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1026440824
 Transform:
   m_ObjectHideFlags: 0
@@ -16103,7 +16103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7880845992894919234
 Transform:
   m_ObjectHideFlags: 0
@@ -25134,7 +25134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7108379480302350900
 Transform:
   m_ObjectHideFlags: 0
@@ -25226,7 +25226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1535895468953290049
 Transform:
   m_ObjectHideFlags: 0
@@ -25404,7 +25404,6 @@ MonoBehaviour:
   - {fileID: 6624339990215297278, guid: 772e4d741be1dad4f8636a41177331be, type: 3}
   - {fileID: 2457514473649465754, guid: 00f545e496a48894bbbda6535371292a, type: 3}
   - {fileID: 9139753892791245702, guid: 6df41185d7d3a0947b175fc55964bddb, type: 3}
-  rooms: []
 --- !u!114 &7773237240124647391
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,13 +22,9 @@ public class ToLevel : MonoBehaviour
         loadingScreen.SetActive(false);
     }
 
-    void OnTriggerEnter2D (Collider2D other)
+    public void ShowDialogue()
     {
-        if (other.gameObject.tag == "Player"){
-
-            text.SetActive(true);
-
-        }
+        text.SetActive(true);
     }
 
     void Update ()
