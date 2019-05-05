@@ -10,6 +10,24 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get; private set; }
 
     private List<GameObject> _rooms;
+ 
+
+    public int numbRooms;
+
+    public int endRooms;
+    private Generation_1 end;
+
+    void Update()
+    {
+        end = GetComponent<Generation_1>();
+        numbRooms = rooms.Count;
+
+        //tring to stop the generation of new rooms after an amount determind by endRooms int;
+        if (rooms.Count > endRooms)
+        {
+            end.enabled = false;
+        }
+    }
 
     public List<GameObject> rooms
     {

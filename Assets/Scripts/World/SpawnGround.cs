@@ -28,6 +28,7 @@ public class SpawnGround : MonoBehaviour
         {
             ground.GetComponent<Generation_1>().GenDoor();
         } else {
+
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }

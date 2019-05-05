@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class CameraTP : MonoBehaviour
 {
-    public Transform cameraPos;
-    public GameObject Camera;
+    public GameObject camera;
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void TeleportCamera()
     {
-        if (other.CompareTag("Player"))
-        {
-            Camera.transform.position = this.transform.position;
-        }
+        camera.transform.position = this.transform.position;
     }
 }

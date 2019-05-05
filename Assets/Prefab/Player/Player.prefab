@@ -55,6 +55,7 @@ MonoBehaviour:
   activeWeapon: {fileID: 0}
   isReversed: 0
   attackPos: {fileID: 0}
+  Weapon: {fileID: 0}
 --- !u!1 &1491217831
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   activeWeapon: {fileID: 0}
   isReversed: 0
   attackPos: {fileID: 1491217832}
+  Weapon: {fileID: 0}
 --- !u!114 &1618400427
 MonoBehaviour:
   m_ObjectHideFlags: 0

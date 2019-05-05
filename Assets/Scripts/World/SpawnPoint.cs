@@ -11,7 +11,7 @@ public class SpawnPoint : MonoBehaviour
     void Start()
     {
         int rand = Random.Range(0, enemies.Length);
-        Instantiate(enemies[rand], transform.position, transform.rotation);
+        Instantiate(enemies[rand], transform.position, transform.rotation, transform);
     }
 
     // Update is called once per frame

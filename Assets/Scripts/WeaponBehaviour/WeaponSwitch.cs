@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSwitch : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class WeaponSwitch : MonoBehaviour
     public bool isReversed = false;
 
     public Transform attackPos;
+
+    public Image Weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +54,11 @@ public class WeaponSwitch : MonoBehaviour
             weaponSequence.Enqueue(activeWeapon);
             activeWeapon = weaponSequence.Dequeue();
         }
-        
+
+        // if selected show icon on UI
+
+        Weapon.sprite = activeWeapon.GetComponent<Weapon>().Icon;
+
     }
 
     public void Attack()

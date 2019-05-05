@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Weapon : MonoBehaviour
     public GameObject weapeonSwitch;
 
     private float timeAttack;
+
+    public Sprite Icon;
 
     void Start()
     {

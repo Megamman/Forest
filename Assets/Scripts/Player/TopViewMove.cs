@@ -57,6 +57,15 @@ public class TopViewMove : MonoBehaviour
 
             toLevelScript.ShowDialogue();
         }
+
+        if (other.tag == "MainCamera")
+        {
+            CameraTP toPosScript = other.GetComponentInChildren<CameraTP>();
+            if (toPosScript == null) return;
+
+            toPosScript.TeleportCamera();
+        }
+
     }
 
 }

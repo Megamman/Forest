@@ -19,7 +19,6 @@ public class ToLevel : MonoBehaviour
 
     void Start () {
         text.SetActive(false);
-        loadingScreen.SetActive(false);
     }
 
     public void ShowDialogue()
@@ -32,31 +31,9 @@ public class ToLevel : MonoBehaviour
         if (Input.GetButtonDown("Interaction") && text.activeInHierarchy == true)
         {
             text.SetActive(false);
-            //SceneManager.LoadScene(levelName);
-
-            trees.SetBool("ChangeScene", true);
-
-            StartCoroutine(LoadAsynchronously());
+            SceneManager.LoadScene(levelName);
         }
 
-    }
-
-    IEnumerator LoadAsynchronously ()
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
-
-        loadingScreen.SetActive(true);
-
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            slider.value = progress;
-            progressText.text = progress * 100f + "%";
-
-            yield return null;
-        }
-        if (operation.isDone) trees.SetBool("ChangeScene", false);
     }
 
     void OnTriggerExit2D () {

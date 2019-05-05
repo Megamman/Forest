@@ -673,10 +673,10 @@
     <Compile Include="Assets\Scripts\WeaponBehaviour\Die.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\Weapon.cs" />
     <Compile Include="Assets\Scripts\WeaponBehaviour\WeaponSwitch.cs" />
-    <Compile Include="Assets\Scripts\World\AddRoom.cs" />
     <Compile Include="Assets\Scripts\World\Camera.cs" />
     <Compile Include="Assets\Scripts\World\CameraTP.cs" />
     <Compile Include="Assets\Scripts\World\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\World\LoadLevel.cs" />
     <Compile Include="Assets\Scripts\World\MenuManager.cs" />
     <Compile Include="Assets\Scripts\World\QuitGame.cs" />
     <Compile Include="Assets\Scripts\World\Restart.cs" />

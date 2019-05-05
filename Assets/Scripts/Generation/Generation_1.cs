@@ -18,8 +18,8 @@ public class Generation_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("GenEnemy", 0.1f);
-        Invoke("GenTree", 0.1f);
+        Invoke("GenEnemy", 0);
+        Invoke("GenTree", 0);
         Invoke("GenDoors", 0.1f);
     }
 
