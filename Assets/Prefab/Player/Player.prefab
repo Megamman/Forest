@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072838922}
   - component: {fileID: 1072838921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -56,6 +56,7 @@ MonoBehaviour:
   isReversed: 0
   attackPos: {fileID: 0}
   Weapon: {fileID: 0}
+  LoadWeapon: {fileID: 0}
 --- !u!1 &1491217831
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491217832}
   - component: {fileID: 7815677278133338609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -108,6 +109,7 @@ MonoBehaviour:
   isReversed: 0
   attackPos: {fileID: 1491217832}
   Weapon: {fileID: 0}
+  LoadWeapon: {fileID: 0}
 --- !u!114 &1618400427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9150233022497076258}
   - component: {fileID: 9150233022497076259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponPos
   m_TagString: AttackPos
   m_Icon: {fileID: 0}
@@ -207,7 +209,7 @@ GameObject:
   - component: {fileID: 3945683837807720527}
   - component: {fileID: 9150233022505273152}
   - component: {fileID: 9150233022505273153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -438,6 +440,11 @@ PrefabInstance:
       propertyPath: weapeonSwitch
       value: 
       objectReference: {fileID: 1491217831}
+    - target: {fileID: 1670511087, guid: d29001766e7ff8e4e99df454509f11c1, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 4670e569758387f4bba54fbe62ff1e93,
+        type: 3}
     - target: {fileID: 6224043097335884418, guid: d29001766e7ff8e4e99df454509f11c1,
         type: 3}
       propertyPath: m_Layer
@@ -544,6 +551,12 @@ PrefabInstance:
       propertyPath: weapeonSwitch
       value: 
       objectReference: {fileID: 1491217831}
+    - target: {fileID: 510314528441083156, guid: e20444a725476ee46b0822e249f574e7,
+        type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: af4136de52368c74d8116b3d85e0de36,
+        type: 3}
     - target: {fileID: 890020890399496246, guid: e20444a725476ee46b0822e249f574e7,
         type: 3}
       propertyPath: m_Layer
@@ -725,6 +738,12 @@ PrefabInstance:
       propertyPath: weapeonSwitch
       value: 
       objectReference: {fileID: 1491217831}
+    - target: {fileID: 1045231235537109509, guid: 710d41727ba26494fb8ee4ba79186c78,
+        type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: e6ffcc2f7db637d4598fd6d938d7d474,
+        type: 3}
     - target: {fileID: 1045231235247533280, guid: 710d41727ba26494fb8ee4ba79186c78,
         type: 3}
       propertyPath: m_Layer
@@ -836,6 +855,12 @@ PrefabInstance:
       propertyPath: weapeonSwitch
       value: 
       objectReference: {fileID: 1491217831}
+    - target: {fileID: 3912191836306870896, guid: bda14ffe392e99b4ca511834d51044de,
+        type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f776a1f8742ac6744b971c288c7e3bbe,
+        type: 3}
     - target: {fileID: 3767494577219560517, guid: bda14ffe392e99b4ca511834d51044de,
         type: 3}
       propertyPath: m_SortingOrder

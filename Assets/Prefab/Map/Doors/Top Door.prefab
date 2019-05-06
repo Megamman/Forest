@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6148796426547418874}
   - component: {fileID: 9182186640578689660}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bottem TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5287407587064011743}
   - component: {fileID: 5642513786444064659}
   - component: {fileID: 8483554945956442125}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bottem Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 3470056317290318334}
   - component: {fileID: 6586573900564779249}
   - component: {fileID: 1085893871}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Top Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -1819,7 +1819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9139753892791245701}
   - component: {fileID: 9139753892791245700}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Top Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1864,7 +1864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9139753893033169723}
   - component: {fileID: 9139753893033169721}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Top TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -1909,9 +1909,10 @@ GameObject:
   - component: {fileID: 9139753894071519308}
   - component: {fileID: 9139753894071519298}
   - component: {fileID: 9139753894071519299}
-  m_Layer: 0
+  - component: {fileID: 824788153}
+  m_Layer: 10
   m_Name: Top Spawn Room
-  m_TagString: Untagged
+  m_TagString: Rooms
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,3 +1970,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &824788153
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9139753894071519309}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -17,12 +17,14 @@ public class WeaponSwitch : MonoBehaviour
     public Transform attackPos;
 
     public Image Weapon;
+    public Slider LoadWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
         weaponSequence = new Queue<GameObject>(Weapons);
         activeWeapon = weaponSequence.Dequeue();
+        LoadWeapon.value = 0;
         //activeAttack = activeWeapon.GetComponent<Weapon>().Attack();
     }
 
@@ -58,6 +60,22 @@ public class WeaponSwitch : MonoBehaviour
         // if selected show icon on UI
 
         Weapon.sprite = activeWeapon.GetComponent<Weapon>().Icon;
+
+        StartCoroutine(WeaponLoader());
+
+    }
+
+    IEnumerator WeaponLoader()
+    {
+        float weapTimer = activeWeapon.GetComponent<Weapon>().timeAttack;
+        LoadWeapon.maxValue = activeWeapon.GetComponent<Weapon>().behavior.btwAttack;
+
+        while (weapTimer > 0)
+        {
+            LoadWeapon.value = activeWeapon.GetComponent<Weapon>().timeAttack;
+
+            yield return null;
+        }
 
     }
 

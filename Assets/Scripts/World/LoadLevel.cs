@@ -8,11 +8,14 @@ public class LoadLevel : MonoBehaviour
 {
     public string levelName;
 
+    public float minRooms;
+
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
 
     public Animator trees;
+    public GameObject treesObject;
 
     public int rooms;
     public bool operation = false;
@@ -21,6 +24,8 @@ public class LoadLevel : MonoBehaviour
     void Start()
     {
         loadingScreen.SetActive(true);
+        treesObject.SetActive(true);
+        trees.SetBool("ChangeScene", true);
     }
 
     // Update is called once per frame
@@ -28,7 +33,26 @@ public class LoadLevel : MonoBehaviour
     {
         rooms = GetComponent<LevelManager>().numbRooms;
 
+        StartCoroutine(LevelLoader());
         //load();
+    }
+
+    IEnumerator LevelLoader()
+    {
+        float rooms = GetComponent<LevelManager>().rooms.Count;
+        slider.maxValue = minRooms;
+
+        while (rooms < minRooms)
+        {
+            slider.value = GetComponent<LevelManager>().rooms.Count;
+
+            yield return null;
+        }
+        trees.SetBool("ChangeScene", false);
+        loadingScreen.SetActive(false);
+        //treesObject.SetActive(false);
+
+
     }
 
     /*void load()

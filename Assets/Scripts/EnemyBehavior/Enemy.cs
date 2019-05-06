@@ -137,6 +137,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        anim.SetTrigger("Hit");
 
         if (health <= 0)
         {

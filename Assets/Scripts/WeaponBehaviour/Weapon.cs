@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
 
     public GameObject weapeonSwitch;
 
-    private float timeAttack;
+    public float timeAttack;
 
     public Sprite Icon;
 

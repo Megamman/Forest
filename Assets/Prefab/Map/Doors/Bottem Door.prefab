@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810914586770361952}
   - component: {fileID: 1534204100520983100}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Top TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 7735932278129751070}
   - component: {fileID: 1487070485629583321}
   - component: {fileID: 7272416311731887773}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Top Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7360393484780665549}
   - component: {fileID: 7360393484780665548}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bottem Door
   m_TagString: Paths
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7484857238569237709}
   - component: {fileID: 7484857238569237711}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bottem TP Room
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1008,9 +1008,10 @@ GameObject:
   - component: {fileID: 7484857240392184386}
   - component: {fileID: 624415286996283824}
   - component: {fileID: 7484857240392184384}
-  m_Layer: 0
+  - component: {fileID: 261279714}
+  m_Layer: 10
   m_Name: Bottem Spawn Room
-  m_TagString: Untagged
+  m_TagString: Rooms
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,6 +1069,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &261279714
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7484857240392184385}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8231363176947904415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1104,7 @@ GameObject:
   - component: {fileID: 168824650159010359}
   - component: {fileID: 4165390363653655124}
   - component: {fileID: 2270763036137501934}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bottem Door
   m_TagString: Paths
   m_Icon: {fileID: 0}

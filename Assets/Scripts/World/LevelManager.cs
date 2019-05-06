@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
         //tring to stop the generation of new rooms after an amount determind by endRooms int;
         if (rooms.Count > endRooms)
         {
-            end.enabled = false;
+            //end.enabled = false;
         }
     }
 

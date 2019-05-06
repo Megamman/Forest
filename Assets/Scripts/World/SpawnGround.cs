@@ -6,34 +6,26 @@ public class SpawnGround : MonoBehaviour
 {
     public GameObject ground;
 
-    private bool foundGround = false;
+    private bool foundRoom = false;
 
     // Start is called before the first frame update
     void Start() {
 
-        Invoke("Ground", 0.5f);
-    }
-
-    void OnTriggerEnter2D (Collider2D other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            foundGround = true;
-        }
+        Ground();
     }
 
     void Ground()
     {
-        if (foundGround)
+        if (foundRoom)
         {
-            ground.GetComponent<Generation_1>().GenDoor();
+            ground.GetComponent<Generation_1>().GenDoors();
         } else {
 
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }
 
-        Destroy(this);
+        //Destroy(this);
 
     }
 

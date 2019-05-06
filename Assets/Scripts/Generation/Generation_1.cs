@@ -34,18 +34,21 @@ public class Generation_1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
 
+        if (other.tag == "Rooms")
+        {
+            Debug.Log("ground");
+            //foundRoom = true;
+        }
+
         if (other.CompareTag("enemy"))
         {
+            Debug.Log(gameObject.name);
             foundEnemy = true;
         } else {
             foundEnemy = false;
             this.gameObject.SetActive(true);
         }
 
-        if (other.CompareTag("Ground"))
-        {
-            Destroy(this);
-        }
     }
 
     void GenEnemy()
@@ -69,15 +72,11 @@ public class Generation_1 : MonoBehaviour
 
         if (doorRand > 1)
         {
-            GenDoor();
+        int pathRand = Random.Range(0, doors.Length);
+        Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
         }
 
     }
 
-    public void GenDoor()
-    {
-        int pathRand = Random.Range(0, doors.Length);
-        Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
-    }
 
 }
