@@ -17,15 +17,35 @@ public class LevelManager : MonoBehaviour
     public int endRooms;
     private Generation_1 end;
 
+    public float timeNewRoom;
+    public float btwNewRoom;
+
+    void Start()
+    {
+        timeNewRoom = btwNewRoom;
+    }
+
     void Update()
     {
         end = GetComponent<Generation_1>();
         numbRooms = rooms.Count;
+        timeNewRoom -= Time.deltaTime;
 
         //tring to stop the generation of new rooms after an amount determind by endRooms int;
         if (rooms.Count > endRooms)
         {
             //end.enabled = false;
+        }
+
+        if (rooms.Count == +1)
+        {
+            timeNewRoom = btwNewRoom;
+        }
+
+        if (rooms.Count == 4 && timeNewRoom < 0)
+        {
+            Debug.Log("reload");
+            Application.LoadLevel(3);
         }
     }
 

@@ -72,8 +72,8 @@ public class Generation_1 : MonoBehaviour
 
         if (doorRand > 1)
         {
-        int pathRand = Random.Range(0, doors.Length);
-        Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
+            int pathRand = Random.Range(0, doors.Length);
+            Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
         }
 
     }

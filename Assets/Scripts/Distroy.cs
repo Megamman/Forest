@@ -6,10 +6,11 @@ public class Distroy : MonoBehaviour
 {
     void OnTriggerEnter2D (Collider2D other)
     {
+
         if(other.tag == "Rooms")
         {
             Debug.Log("ground");
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 }

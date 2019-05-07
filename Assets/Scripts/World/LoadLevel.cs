@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class LoadLevel : MonoBehaviour
 {
-    public string levelName;
-
     public float minRooms;
 
     public GameObject loadingScreen;

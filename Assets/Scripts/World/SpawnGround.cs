@@ -5,28 +5,42 @@ using UnityEngine;
 public class SpawnGround : MonoBehaviour
 {
     public GameObject ground;
+    public GameObject altGround;
 
-    private bool foundRoom = false;
+    public bool foundRoom = false;
 
     // Start is called before the first frame update
     void Start() {
 
-        Ground();
+        Invoke("Ground", 0.2f);
+        //Ground();
     }
 
     void Ground()
     {
-        if (foundRoom)
+        if (!foundRoom)
         {
-            ground.GetComponent<Generation_1>().GenDoors();
-        } else {
-
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }
+        else 
+        {
+            Instantiate(altGround, transform.position, transform.rotation);
+        }
 
-        //Destroy(this);
+        Destroy(this);
 
+    }
+
+    void OnTriggerEnter2D (Collider2D other)
+    {
+
+        if(other.tag == "Rooms")
+        {
+            Debug.Log("found Room");
+            foundRoom = true;
+            //Destroy(other.gameObject);
+        }
     }
 
 }

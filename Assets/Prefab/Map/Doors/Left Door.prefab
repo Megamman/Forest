@@ -1811,7 +1811,7 @@ GameObject:
   - component: {fileID: 6624339991061194759}
   - component: {fileID: 6624339991061194760}
   - component: {fileID: 358549078}
-  m_Layer: 10
+  m_Layer: 21
   m_Name: Left Spawn Room
   m_TagString: Rooms
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1845,6 +1845,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 8626305240596965459, guid: 9955e320133165f448c40a955415eda0, type: 3}
+  altGround: {fileID: 2212647726671046947, guid: fa8800d37711e6449bd7ceee5efc40ae,
+    type: 3}
+  foundRoom: 0
 --- !u!61 &6624339991061194760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1879,7 +1882,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6624339991061194762}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
