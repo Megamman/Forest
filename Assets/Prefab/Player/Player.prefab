@@ -327,6 +327,7 @@ MonoBehaviour:
   fullHealth: 5
   health: 5
   slider: {fileID: 0}
+  HPText: {fileID: 0}
 --- !u!70 &9150233022505273152
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

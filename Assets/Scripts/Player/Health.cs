@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
 
     public Slider slider;
 
+    public Text HPText;
+
     void Start()
     {
         slider.maxValue = fullHealth;
@@ -34,7 +36,29 @@ public class Health : MonoBehaviour
         {
             health = fullHealth;
         }
+
+        HPText.text = health + "/" + fullHealth;
         
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "HPPotion")
+        {
+            Destroy(other.gameObject);
+            if(health > fullHealth)
+            {
+            health += 5;
+            }
+        }
+
+        if (other.tag == "Hearth")
+        {
+            Destroy(other.gameObject);
+            health += 1;
+            fullHealth += 1;
+
+        }
     }
 
     IEnumerator Healthslider()

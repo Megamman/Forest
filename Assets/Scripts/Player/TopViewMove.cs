@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopViewMove : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class TopViewMove : MonoBehaviour
     private Rigidbody2D rb2d;
 
     private SpriteRenderer renderer;
+
+    public 
 
     void Awake()
     {
@@ -64,6 +67,12 @@ public class TopViewMove : MonoBehaviour
             if (toPosScript == null) return;
 
             toPosScript.TeleportCamera();
+        }
+
+        if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+
         }
 
     }

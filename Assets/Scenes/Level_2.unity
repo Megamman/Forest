@@ -5261,6 +5261,11 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 1308584702}
+    - target: {fileID: 3945683837807720527, guid: 316708bca7ee7ba4aa3b28e07afb7f60,
+        type: 3}
+      propertyPath: HPText
+      value: 
+      objectReference: {fileID: 4589518946828151584}
     - target: {fileID: 7815677278133338609, guid: 316708bca7ee7ba4aa3b28e07afb7f60,
         type: 3}
       propertyPath: Weapon
@@ -5475,6 +5480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570796429451309286, guid: 52b118512bfb383479dad61345230a7c,
+        type: 3}
+      propertyPath: m_Name
+      value: HP Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b118512bfb383479dad61345230a7c, type: 3}
@@ -19175,6 +19185,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &4589518946828151584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4589518946828151584, guid: 52b118512bfb383479dad61345230a7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1198099794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4897221672246118175
 Transform:
   m_ObjectHideFlags: 0

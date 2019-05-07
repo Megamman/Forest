@@ -93,7 +93,7 @@ MonoBehaviour:
   health: 0
   drop:
   - {fileID: 0}
-  - {fileID: 1627102435627363341, guid: d5c193857991ee540baef0afed98238a, type: 3}
+  - {fileID: 0}
 --- !u!1 &5654251162709725213
 GameObject:
   m_ObjectHideFlags: 0

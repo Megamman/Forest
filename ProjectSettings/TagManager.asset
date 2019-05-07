@@ -11,6 +11,9 @@ TagManager:
   - Paths
   - Ground
   - Rooms
+  - Hearth
+  - HPPotion
+  - Coin
   layers:
   - Default
   - TransparentFX
