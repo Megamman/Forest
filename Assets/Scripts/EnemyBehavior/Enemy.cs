@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
         if (distFromPlayer < behavior.detectDist)
         {
-            if (distFromPlayer > behavior.stoppingDist)
+            if (distFromPlayer > behavior.stoppingDist) //|| health < behavior.health if taken damage
             {
                 anim.SetInteger("Speed", 1);
                 transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);            
@@ -78,8 +78,13 @@ public class Enemy : MonoBehaviour
             Vector2 pos = Random.insideUnitCircle * behavior.noiseAmount;
             enemyGraphic.localPosition = Vector2.Lerp(enemyGraphic.localPosition, pos, Time.deltaTime);
         }
-    }
 
+        if (health < behavior.health)
+        {
+            anim.SetInteger("Speed", 1);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);     
+        }
+    }
 
     // Update is called once per frame
     void Attack()
@@ -110,7 +115,7 @@ public class Enemy : MonoBehaviour
 
             if (behavior.meleeAttack && !behavior.rangeAttack)
             {
-                Debug.Log("start ATTACK");
+                //Debug.Log("start ATTACK");
                 attackArea.SetActive(true);
                 anim.SetBool("Melee Attack", true);
             }
@@ -129,7 +134,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Blade")
         {
             anim.SetTrigger("Hit");
-            Debug.Log("Hit!!");
+            //Debug.Log("Hit!!");
 
         }
     }
@@ -141,7 +146,8 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject, .3f);
+            anim.SetTrigger("Die");
 
             int dropRand = Random.Range(0, drop.Length);
             Instantiate(drop[dropRand], transform.position, transform.rotation);

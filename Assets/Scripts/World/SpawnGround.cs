@@ -8,6 +8,7 @@ public class SpawnGround : MonoBehaviour
     public GameObject altGround;
 
     public bool foundRoom = false;
+    public bool foundTrigger = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -23,9 +24,10 @@ public class SpawnGround : MonoBehaviour
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }
-        else 
+        else if (foundTrigger)
         {
-            Instantiate(altGround, transform.position, transform.rotation);
+            GameObject newGround = Instantiate(altGround, transform.position, transform.rotation);
+            LevelManager.Instance.rooms.Add(newGround);
         }
 
         Destroy(this);
@@ -37,8 +39,15 @@ public class SpawnGround : MonoBehaviour
 
         if(other.tag == "Rooms")
         {
-            Debug.Log("found Room");
+            //Debug.Log("found Room");
             foundRoom = true;
+            //Destroy(other.gameObject);
+        }
+
+        if(other.tag == "Trigger")
+        {
+            Debug.Log("found Room");
+            foundTrigger = true;
             //Destroy(other.gameObject);
         }
     }

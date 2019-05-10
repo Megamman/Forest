@@ -70,4 +70,17 @@ public class Health : MonoBehaviour
 
         yield return null;
     }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        //anim.SetTrigger("Hit");
+
+        if (health <= 0)
+        {
+            Destroy(gameObject, .3f);
+            //anim.SetTrigger("Die");
+
+        }
+    }
 }

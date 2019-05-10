@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\DialogueBehavior\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\Distroy.cs" />
      <Compile Include="Assets\Scripts\EnemyBehavior\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemyBehavior\EnemyDemage.cs" />
      <Compile Include="Assets\Scripts\Extra\ActiveDeactive.cs" />
      <Compile Include="Assets\Scripts\Extra\Doors.cs" />
      <Compile Include="Assets\Scripts\Extra\WaypointMove.cs" />
