@@ -45,11 +45,11 @@ public class Health : MonoBehaviour
     {
         if (other.tag == "HPPotion")
         {
-            Destroy(other.gameObject);
-            if(health > fullHealth)
-            {
+            //if(health < fullHealth)
+            //{
             health += 5;
-            }
+            //}
+            Destroy(other.gameObject);
         }
 
         if (other.tag == "Hearth")

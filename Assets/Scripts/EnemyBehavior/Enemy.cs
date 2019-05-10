@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
 
         if (timeAttack > 0) timeAttack -= Time.deltaTime;
 
-        if (distFromPlayer < behavior.detectDist)
+        if (distFromPlayer < behavior.detectDist || health < behavior.health)
         {
             if (distFromPlayer > behavior.stoppingDist) //|| health < behavior.health if taken damage
             {
@@ -77,12 +77,6 @@ public class Enemy : MonoBehaviour
         {
             Vector2 pos = Random.insideUnitCircle * behavior.noiseAmount;
             enemyGraphic.localPosition = Vector2.Lerp(enemyGraphic.localPosition, pos, Time.deltaTime);
-        }
-
-        if (health < behavior.health)
-        {
-            anim.SetInteger("Speed", 1);
-            transform.position = Vector2.MoveTowards(transform.position, player.position, behavior.speed * Time.deltaTime);     
         }
     }
 

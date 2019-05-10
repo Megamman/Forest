@@ -24,10 +24,11 @@ public class SpawnGround : MonoBehaviour
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }
-        else if (foundTrigger)
+        if (foundTrigger)
         {
-            GameObject newGround = Instantiate(altGround, transform.position, transform.rotation);
-            LevelManager.Instance.rooms.Add(newGround);
+            Debug.Log (gameObject.transform.position);
+            GameObject newAltGround = Instantiate(altGround, transform.position, transform.rotation);
+            LevelManager.Instance.rooms.Add(newAltGround);
         }
 
         Destroy(this);

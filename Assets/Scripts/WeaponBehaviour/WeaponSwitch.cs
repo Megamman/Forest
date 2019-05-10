@@ -35,7 +35,7 @@ public class WeaponSwitch : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            activeWeapon.GetComponent<Weapon>().Attack();
+            activeWeapon.GetComponent<Weapon>().Attack(this);
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)

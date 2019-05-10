@@ -8,8 +8,6 @@ public class Weapon : MonoBehaviour
 
     public WeaponBehaviour behavior;
 
-    public GameObject weapeonSwitch;
-
     public float timeAttack;
 
     public Sprite Icon;
@@ -22,11 +20,11 @@ public class Weapon : MonoBehaviour
     }
 
 
-    public void Attack()
+    public void Attack(WeaponSwitch ws)
     {
-        if (Input.GetMouseButtonDown(0) && timeAttack <= 0)
+        if (timeAttack <= 0)
         {
-            weapeonSwitch.GetComponent<WeaponSwitch>().Attack();
+            ws.Attack();
             timeAttack = behavior.btwAttack;
         }
     }

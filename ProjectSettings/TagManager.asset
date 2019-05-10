@@ -14,6 +14,7 @@ TagManager:
   - Hearth
   - HPPotion
   - Coin
+  - Trigger
   layers:
   - Default
   - TransparentFX

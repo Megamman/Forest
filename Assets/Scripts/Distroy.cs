@@ -9,7 +9,7 @@ public class Distroy : MonoBehaviour
 
         if(other.tag == "Rooms")
         {
-            Debug.Log("ground");
+            //Debug.Log("ground");
             //Destroy(other.gameObject);
         }
     }
