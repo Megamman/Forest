@@ -438,10 +438,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1670511087, guid: d29001766e7ff8e4e99df454509f11c1, type: 3}
-      propertyPath: weapeonSwitch
-      value: 
-      objectReference: {fileID: 1491217831}
-    - target: {fileID: 1670511087, guid: d29001766e7ff8e4e99df454509f11c1, type: 3}
       propertyPath: Icon
       value: 
       objectReference: {fileID: 21300000, guid: 4670e569758387f4bba54fbe62ff1e93,
@@ -451,12 +447,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1102690048500386637, guid: d29001766e7ff8e4e99df454509f11c1,
-        type: 3}
-      propertyPath: behavior
-      value: 
-      objectReference: {fileID: 11400000, guid: 9ea57784cdfdcb342b7f745cf17c2253,
-        type: 2}
     - target: {fileID: 5075665549061218455, guid: d29001766e7ff8e4e99df454509f11c1,
         type: 3}
       propertyPath: m_SortingOrder
@@ -553,11 +543,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 510314528441083156, guid: e20444a725476ee46b0822e249f574e7,
-        type: 3}
-      propertyPath: weapeonSwitch
-      value: 
-      objectReference: {fileID: 1491217831}
     - target: {fileID: 510314528441083156, guid: e20444a725476ee46b0822e249f574e7,
         type: 3}
       propertyPath: Icon
@@ -740,17 +725,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1045231235537109509, guid: 710d41727ba26494fb8ee4ba79186c78,
-        type: 3}
-      propertyPath: weapeonSwitch
-      value: 
-      objectReference: {fileID: 1491217831}
-    - target: {fileID: 1045231235537109509, guid: 710d41727ba26494fb8ee4ba79186c78,
-        type: 3}
-      propertyPath: Icon
-      value: 
-      objectReference: {fileID: 21300000, guid: e6ffcc2f7db637d4598fd6d938d7d474,
-        type: 3}
     - target: {fileID: 1045231235247533280, guid: 710d41727ba26494fb8ee4ba79186c78,
         type: 3}
       propertyPath: m_Layer
@@ -857,11 +831,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 3912191836306870896, guid: bda14ffe392e99b4ca511834d51044de,
-        type: 3}
-      propertyPath: weapeonSwitch
-      value: 
-      objectReference: {fileID: 1491217831}
     - target: {fileID: 3912191836306870896, guid: bda14ffe392e99b4ca511834d51044de,
         type: 3}
       propertyPath: Icon
