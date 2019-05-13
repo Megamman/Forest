@@ -13,25 +13,25 @@ public class SpawnGround : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 
-        Invoke("Ground", 0.2f);
+        Invoke("Ground", 0.3f);
         //Ground();
     }
 
     void Ground()
     {
-        if (!foundRoom)
+        if (!foundRoom && !foundTrigger)
         {
             GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
             LevelManager.Instance.rooms.Add(newGround);
         }
-        if (foundTrigger)
+
+        else if (foundTrigger && !foundRoom)
         {
             Debug.Log (gameObject.transform.position);
-            GameObject newAltGround = Instantiate(altGround, transform.position, transform.rotation);
-            LevelManager.Instance.rooms.Add(newAltGround);
+            Instantiate(altGround, transform.position, transform.rotation);
         }
 
-        Destroy(this);
+        Destroy(this.gameObject);
 
     }
 
