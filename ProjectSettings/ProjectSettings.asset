@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: SV Games
   productName: Forest
   defaultCursor: {fileID: 2800000, guid: 7198848fc142ada4a94e6a6e0ee02356, type: 3}
-  cursorHotspot: {x: -10, y: 10}
+  cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1

@@ -14,7 +14,8 @@ public class TopViewMove : MonoBehaviour
 
     private SpriteRenderer renderer;
 
-    public 
+    private GameObject weapon;
+    public GameObject weaponSlot;
 
     void Awake()
     {
@@ -73,6 +74,14 @@ public class TopViewMove : MonoBehaviour
         {
             Destroy(other.gameObject);
 
+        }
+
+        if (other.tag == "Weapon")
+        {
+            weapon = other.GetComponent<WeaponType>().Weapon;
+            Instantiate(weapon, transform.position, transform.rotation, weaponSlot.transform);
+            
+            Destroy(other.gameObject);
         }
 
     }

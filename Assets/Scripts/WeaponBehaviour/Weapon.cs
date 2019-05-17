@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
     }
 
 
-    public void Attack(WeaponSwitch ws)
+    public void Attack(WeaponChanger ws)
     {
         if (timeAttack <= 0)
         {

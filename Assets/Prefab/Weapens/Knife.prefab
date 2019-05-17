@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1670511087}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 11400000, guid: 9ea57784cdfdcb342b7f745cf17c2253, type: 2}
-  weapeonSwitch: {fileID: 0}
+  timeAttack: 0
+  Icon: {fileID: 21300000, guid: 4670e569758387f4bba54fbe62ff1e93, type: 3}
 --- !u!1 &6224043097335884418
 GameObject:
   m_ObjectHideFlags: 0

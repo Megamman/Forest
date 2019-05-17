@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3119e897e6b24de41828061da8deee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
+  spawn:
   - {fileID: 7293587663910817582, guid: 8bb064429cc574a4bb9488e0d6e4d880, type: 3}
   - {fileID: 3177065754002047929, guid: e7cd806c25d1f0444a6a96c0323d1923, type: 3}
   - {fileID: 5654251162621355362, guid: 341b46ffb8dbc09488a863be35429098, type: 3}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3119e897e6b24de41828061da8deee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
+  spawn:
   - {fileID: 7293587663910817582, guid: 8bb064429cc574a4bb9488e0d6e4d880, type: 3}
   - {fileID: 3177065754002047929, guid: e7cd806c25d1f0444a6a96c0323d1923, type: 3}
   - {fileID: 5654251162621355362, guid: 341b46ffb8dbc09488a863be35429098, type: 3}

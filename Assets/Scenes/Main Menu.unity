@@ -195,6 +195,7 @@ MonoBehaviour:
   rb2d: {fileID: 124558887}
   renderer: {fileID: 1841334380}
   health: 5
+  drop: []
 --- !u!50 &124558887
 Rigidbody2D:
   serializedVersion: 4
@@ -956,6 +957,7 @@ MonoBehaviour:
   rb2d: {fileID: 741392990}
   renderer: {fileID: 200747911}
   health: 5
+  drop: []
 --- !u!50 &741392990
 Rigidbody2D:
   serializedVersion: 4
@@ -25528,7 +25530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5793021f6f343934fb05c4204acab0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Home
+  levelName: Level_2
   loadingScreen: {fileID: 1957041384}
   slider: {fileID: 217934803}
   progressText: {fileID: 628704708}
@@ -26594,6 +26596,7 @@ MonoBehaviour:
   rb2d: {fileID: 896181743068650410}
   renderer: {fileID: 896181743408793339}
   health: 5
+  drop: []
 --- !u!70 &896181743068650413
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -27068,6 +27071,7 @@ MonoBehaviour:
   rb2d: {fileID: 779535487977773135}
   renderer: {fileID: 313552694241631571}
   health: 5
+  drop: []
 --- !u!70 &7933670726219858176
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -27119,3 +27123,4 @@ MonoBehaviour:
   rb2d: {fileID: 1105798665968671322}
   renderer: {fileID: 4142693263281987433}
   health: 5
+  drop: []

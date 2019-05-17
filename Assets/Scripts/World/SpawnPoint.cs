@@ -5,18 +5,12 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
 
-    public GameObject[] enemies;
+    public GameObject[] spawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        int rand = Random.Range(0, enemies.Length);
-        Instantiate(enemies[rand], transform.position, transform.rotation, transform);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int rand = Random.Range(0, spawn.Length);
+        Instantiate(spawn[rand], transform.position, transform.rotation, transform);
     }
 }

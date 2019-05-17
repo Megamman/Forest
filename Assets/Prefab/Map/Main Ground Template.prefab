@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3119e897e6b24de41828061da8deee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
+  spawn:
   - {fileID: 4081026595685937854, guid: f3e9b60e4792c87429c4e9b882d076ab, type: 3}
 --- !u!61 &2212647726671046949
 BoxCollider2D:

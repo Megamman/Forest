@@ -33,10 +33,10 @@ public class WeaponSwitch : MonoBehaviour
     {
         activeWeapon.GetComponent<Weapon>().Timer();
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            activeWeapon.GetComponent<Weapon>().Attack(this);
-        }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     activeWeapon.GetComponent<Weapon>().Attack(this);
+        // }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {

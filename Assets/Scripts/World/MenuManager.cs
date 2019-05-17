@@ -8,10 +8,15 @@ public class MenuManager : MonoBehaviour
 {
 
     public GameObject pausePanel;
+    public GameObject winPanel;
+
+    public GameObject[] enemyCount;
+    public float timer = 0;
 
     void Start()
     {
         pausePanel.SetActive(false);
+        winPanel.SetActive(false);
     }
 
     void Update()
@@ -26,6 +31,19 @@ public class MenuManager : MonoBehaviour
             {
                 ResumeGame();
             }
+        }
+
+        Invoke("win", 0.1f);
+    }
+
+    private void win()
+    {
+        enemyCount = GameObject.FindGameObjectsWithTag("enemy");
+
+        if (enemyCount.Length == 0 && timer == 2)
+        {
+            Time.timeScale = 0;
+            winPanel.SetActive(true);
         }
     }
 

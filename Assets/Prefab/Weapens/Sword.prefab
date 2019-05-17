@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3912191836306870896}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,5 +294,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 11400000, guid: 2fbc3b6a53333a147836ff85ca4c4345, type: 2}
-  wepeon: {fileID: 2618993334726159952}
-  attackPos: {fileID: 0}
+  timeAttack: 0
+  Icon: {fileID: 21300000, guid: f776a1f8742ac6744b971c288c7e3bbe, type: 3}

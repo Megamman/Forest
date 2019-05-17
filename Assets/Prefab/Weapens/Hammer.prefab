@@ -1079,8 +1079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 11400000, guid: 87cea3635d432c548a11f16cf8f13159, type: 2}
-  wepeon: {fileID: 149579313007419385}
-  attackPos: {fileID: 0}
+  timeAttack: 0
+  Icon: {fileID: 21300000, guid: af4136de52368c74d8116b3d85e0de36, type: 3}
 --- !u!1 &7602831340139208814
 GameObject:
   m_ObjectHideFlags: 0

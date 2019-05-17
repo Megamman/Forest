@@ -6,18 +6,28 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 
-    public float fullHealth;
+    private float fullHealth;
 
-    public float health;
+    private float health;
 
     public Slider slider;
 
     public Text HPText;
 
+    public GameObject lostMenu;
+
+    public int healthRand;
+
+    public float totalDamage;
+
     void Start()
     {
-        slider.maxValue = fullHealth;
+        healthRand = Random.Range(5, 12);
+
+        health = healthRand;
         fullHealth = health;
+
+        lostMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,11 +35,15 @@ public class Health : MonoBehaviour
     {
         StartCoroutine(Healthslider());
 
+        slider.maxValue = health;
+
         //demage =- health;
 
         if (health == 0)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
+            Time.timeScale = 0;
+            lostMenu.SetActive(true);
         }
 
         if (fullHealth < health)
@@ -73,7 +87,16 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        if (healthRand > 7 && 9 < healthRand)
+        {
+            totalDamage = damage * 2;
+        }
+        else if (healthRand > 10)
+        {
+            totalDamage = damage * 3;
+        }
+
+        health -= totalDamage;
         //anim.SetTrigger("Hit");
 
         if (health <= 0)

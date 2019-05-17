@@ -29,14 +29,14 @@ public class Enemy : MonoBehaviour
     private float timeAttack;
 
     public GameObject[] drop;
+    private GameObject border;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         health = behavior.health;
-
-        
+        border = GameObject.FindWithTag("Border");
 
         //attackArea.SetActive(false);
     }
@@ -146,6 +146,16 @@ public class Enemy : MonoBehaviour
             int dropRand = Random.Range(0, drop.Length);
             Instantiate(drop[dropRand], transform.position, transform.rotation);
         }
+    }
+
+    void OnBecameVisible()
+    {
+        
+        border.SetActive(true);
+    }
+    void OnDestroy()
+    {
+        border.SetActive(false);
     }
 
 #if UNITY_EDITOR
