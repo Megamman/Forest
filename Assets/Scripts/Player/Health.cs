@@ -8,7 +8,20 @@ public class Health : MonoBehaviour
 
     private float fullHealth;
 
-    private float health;
+    private float _health;
+    protected float CurrentHealth
+    {
+        get
+        {
+            return _health;
+        }
+        private set
+        {
+            _health = value;
+            if (slider != null) slider.value = 1.0f * (_health / fullHealth);
+            if (HPText != null) HPText.text = string.Format("{0}/{1}", _health, fullHealth);
+        }
+    }
 
     public Slider slider;
 
@@ -18,14 +31,12 @@ public class Health : MonoBehaviour
 
     public int healthRand;
 
-    public float totalDamage;
-
     void Start()
     {
         healthRand = Random.Range(5, 12);
 
-        health = healthRand;
-        fullHealth = health;
+        CurrentHealth = healthRand;
+        fullHealth = CurrentHealth;
 
         lostMenu.SetActive(false);
     }
@@ -33,26 +44,19 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Healthslider());
-
-        slider.maxValue = health;
-
         //demage =- health;
 
-        if (health == 0)
+        if (CurrentHealth == 0)
         {
             Destroy(gameObject);
             Time.timeScale = 0;
             lostMenu.SetActive(true);
         }
 
-        if (fullHealth < health)
+        if (fullHealth < CurrentHealth)
         {
-            health = fullHealth;
-        }
-
-        HPText.text = health + "/" + fullHealth;
-        
+            CurrentHealth = fullHealth;
+        }        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -61,7 +65,7 @@ public class Health : MonoBehaviour
         {
             //if(health < fullHealth)
             //{
-            health += 5;
+            CurrentHealth += 5;
             //}
             Destroy(other.gameObject);
         }
@@ -69,41 +73,39 @@ public class Health : MonoBehaviour
         if (other.tag == "Hearth")
         {
             Destroy(other.gameObject);
-            health += 1;
+            CurrentHealth += 1;
             fullHealth += 1;
 
         }
     }
 
-    IEnumerator Healthslider()
+    public void TakeDamage(int damage)
     {
-        // float progress = Mathf.Clamp01(health / .9f);
-
-        slider.value = health;
-        //progressText.text = progress * 100f + "%";
-
-        yield return null;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        if (healthRand > 7 && 9 < healthRand)
+        if (healthRand > 10)
         {
-            totalDamage = damage * 2;
+            damage *= 3;
         }
-        else if (healthRand > 10)
+        else if (healthRand > 7)
         {
-            totalDamage = damage * 3;
+            damage *= 2;
         }
 
-        health -= totalDamage;
+        CurrentHealth -= damage;
         //anim.SetTrigger("Hit");
 
-        if (health <= 0)
+        if (CurrentHealth <= 0)
         {
+            CurrentHealth = 0;
             Destroy(gameObject, .3f);
             //anim.SetTrigger("Die");
+            Invoke ("Death", 3);
 
         }
+    }
+
+    void Death()
+    {
+        Time.timeScale = 0;
+        lostMenu.SetActive(true);
     }
 }

@@ -15,6 +15,16 @@ public class Generation_1 : MonoBehaviour
 
     private bool foundEnemy = true;
 
+    // TESTING
+    [SerializeField]
+    private ActiveDeactive[] borders;
+
+    public void DisableBorder(int index)
+    {
+        borders[index].SetActive(false);
+    }
+    // END TESTING
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +63,7 @@ public class Generation_1 : MonoBehaviour
 
     void GenEnemy()
     {
-        if(enemies.Length > 0)
+        if(enemies.Length > 0 && Random.value > 0.2)
         {
             int enemyRand = Random.Range(0, enemies.Length);
             Instantiate(enemies[enemyRand], transform.position, transform.rotation, transform);
@@ -68,15 +78,13 @@ public class Generation_1 : MonoBehaviour
 
     public void GenDoors()
     {
-        int doorRand = Random.Range(0, 5);
 
-        if (doorRand > 1)
+        if (Random.value > 0.2)
         {
             int pathRand = Random.Range(0, doors.Length);
             Instantiate(doors[pathRand], transform.position, transform.rotation, transform);
+            borders[pathRand].SetActive(false);
         }
 
     }
-
-
 }

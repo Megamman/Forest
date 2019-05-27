@@ -44,6 +44,5 @@ public class Bullet : MonoBehaviour {
     void DestroyProjectile()
     {
         Destroy(gameObject);
-        Debug.Log("Miss");
     }
 }

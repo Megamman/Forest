@@ -364,7 +364,6 @@ MonoBehaviour:
   HPText: {fileID: 0}
   lostMenu: {fileID: 0}
   healthRand: 0
-  totalDamage: 0
 --- !u!70 &9150233022505273152
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -576,6 +575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 5502694758578416575, guid: e20444a725476ee46b0822e249f574e7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 7260361246347911728, guid: e20444a725476ee46b0822e249f574e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,6 +660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045231235537109510, guid: 710d41727ba26494fb8ee4ba79186c78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 1045231235537109511, guid: 710d41727ba26494fb8ee4ba79186c78,
         type: 3}

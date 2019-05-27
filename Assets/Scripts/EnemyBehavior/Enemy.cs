@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     //Input of behavior and stats
     public EnemyBehavior behavior;
 
-    public GameObject attackArea;
+    //public GameObject attackArea;
 
     //If rangeAttack = True
     public GameObject projectile;
@@ -18,11 +18,9 @@ public class Enemy : MonoBehaviour
 
     private Transform player;
 
-    public Animator anim;
+    private Animator anim;
 
     public Rigidbody2D rb2d;
-
-    public SpriteRenderer renderer;
 
     public float health;
 
@@ -31,22 +29,29 @@ public class Enemy : MonoBehaviour
     public GameObject[] drop;
     private GameObject border;
 
+    private SpriteRenderer _renderer;
+
+    private void Awake()
+    {
+        _renderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         health = behavior.health;
         border = GameObject.FindWithTag("Border");
-
-        //attackArea.SetActive(false);
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
+        if (player == null) return;
+        _renderer.flipX = player.position.x < 0;
+
         float move = Input.GetAxis("Horizontal");
         float distFromPlayer = Vector2.Distance(transform.position, player.position);
-
-        renderer.flipX = move < 0;
 
         if (timeAttack > 0) timeAttack -= Time.deltaTime;
 
@@ -86,6 +91,10 @@ public class Enemy : MonoBehaviour
 
         if (timeAttack <= 0)
         {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            anim.SetBool("Attack", true);
+
+            /** 
             if (behavior.rangeAttack && behavior.meleeAttack)
             {
                 int rand = Random.Range(0, 2);
@@ -113,13 +122,14 @@ public class Enemy : MonoBehaviour
                 attackArea.SetActive(true);
                 anim.SetBool("Melee Attack", true);
             }
+            */
 
             timeAttack = behavior.startTimeBtwAttack;
         }
         else
         {
             // if attackArea is not null, it will do the function.
-            if (attackArea != null) attackArea.SetActive(false);
+            //if (attackArea != null) attackArea.SetActive(false);
             anim.SetInteger("Speed", 0);
         }
     }
@@ -143,19 +153,14 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject, .3f);
             anim.SetTrigger("Die");
 
+            if(Random.value > 0.5)
+            {
             int dropRand = Random.Range(0, drop.Length);
             Instantiate(drop[dropRand], transform.position, transform.rotation);
-        }
-    }
+            }
 
-    void OnBecameVisible()
-    {
-        
-        border.SetActive(true);
-    }
-    void OnDestroy()
-    {
-        border.SetActive(false);
+            border.SetActive(false);
+        }
     }
 
 #if UNITY_EDITOR

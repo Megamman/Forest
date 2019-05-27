@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
-
+#if UNITY_EDITOR
     // Update is called once per frame
     void Update()
     {
@@ -14,4 +14,5 @@ public class Restart : MonoBehaviour
             Application.LoadLevel(3);
         }
     }
+#endif
 }

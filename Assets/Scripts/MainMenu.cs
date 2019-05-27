@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public string levelName;
+
+    public GameObject menu;
+    public GameObject guide;
     
     public GameObject loadingScreen;
     public Slider slider;
@@ -15,6 +18,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         loadingScreen.SetActive(false);
+        guide.SetActive(false);
     }
 
     public void PlayGame ()
@@ -26,6 +30,18 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void GuideOn()
+    {
+        menu.SetActive(false);
+        guide.SetActive(true);
+    }
+
+    public void GuideOff()
+    {
+        menu.SetActive(true);
+        guide.SetActive(false);
     }
 
     IEnumerator LoadAsynchronously()

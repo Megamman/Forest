@@ -155,8 +155,6 @@ MonoBehaviour:
   renderer: {fileID: 6502089501836223174}
   health: 0
   drop:
-  - {fileID: 0}
-  - {fileID: 1627102435627363341, guid: d5c193857991ee540baef0afed98238a, type: 3}
   - {fileID: 9012738168995547134, guid: c13738c8ddff60a4b8b428cc76db71e8, type: 3}
   - {fileID: 8461500254946693324, guid: 41fdda07f95da7947bf33980d42180c0, type: 3}
 --- !u!70 &4137682822824716863

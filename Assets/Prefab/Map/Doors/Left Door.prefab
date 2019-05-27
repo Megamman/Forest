@@ -1844,9 +1844,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e1485040359994dac15438966a02a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground: {fileID: 8626305240596965459, guid: 9955e320133165f448c40a955415eda0, type: 3}
+  ground: {fileID: 8283021089908393973, guid: 9955e320133165f448c40a955415eda0, type: 3}
   altGround: {fileID: 2212647726671046947, guid: fa8800d37711e6449bd7ceee5efc40ae,
     type: 3}
+  exitIndex: 3
   foundRoom: 0
   foundTrigger: 0
 --- !u!61 &6624339991061194760

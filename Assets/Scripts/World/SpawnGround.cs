@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SpawnGround : MonoBehaviour
 {
-    public GameObject ground;
+    public Generation_1 ground;
     public GameObject altGround;
+
+    public int exitIndex;
 
     public bool foundRoom = false;
     public bool foundTrigger = false;
@@ -21,8 +23,14 @@ public class SpawnGround : MonoBehaviour
     {
         if (!foundRoom && !foundTrigger)
         {
-            GameObject newGround = Instantiate(ground, transform.position, transform.rotation);
-            LevelManager.Instance.rooms.Add(newGround);
+            Generation_1 genScript = Instantiate<Generation_1>(ground, transform.position, transform.rotation);
+
+            if (genScript != null)
+            {
+                genScript.DisableBorder(exitIndex);
+            }
+
+            LevelManager.Instance.rooms.Add(genScript.gameObject);
         }
 
         else if (foundTrigger && !foundRoom)
