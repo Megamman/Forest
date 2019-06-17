@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 
-    private float fullHealth;
 
     private float _health;
     protected float CurrentHealth
@@ -18,8 +17,8 @@ public class Health : MonoBehaviour
         private set
         {
             _health = value;
-            if (slider != null) slider.value = 1.0f * (_health / fullHealth);
-            if (HPText != null) HPText.text = string.Format("{0}/{1}", _health, fullHealth);
+            if (slider != null) slider.value = 1.0f * (_health / healthRand);
+            if (HPText != null) HPText.text = string.Format("{0}/{1}", _health, healthRand);
         }
     }
 
@@ -33,10 +32,9 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        healthRand = Random.Range(5, 12);
+        healthRand = Random.Range(9, 16);
 
         CurrentHealth = healthRand;
-        fullHealth = CurrentHealth;
 
         lostMenu.SetActive(false);
     }
@@ -53,9 +51,9 @@ public class Health : MonoBehaviour
             lostMenu.SetActive(true);
         }
 
-        if (fullHealth < CurrentHealth)
+        if (healthRand < CurrentHealth)
         {
-            CurrentHealth = fullHealth;
+            CurrentHealth = healthRand;
         }        
     }
 
@@ -63,7 +61,7 @@ public class Health : MonoBehaviour
     {
         if (other.tag == "HPPotion")
         {
-            //if(health < fullHealth)
+            //if(health < healthRand)
             //{
             CurrentHealth += 5;
             //}
@@ -73,19 +71,19 @@ public class Health : MonoBehaviour
         if (other.tag == "Hearth")
         {
             Destroy(other.gameObject);
+            healthRand += 1;
             CurrentHealth += 1;
-            fullHealth += 1;
 
         }
     }
 
     public void TakeDamage(int damage)
     {
-        if (healthRand > 10)
+        if (healthRand > 14)
         {
             damage *= 3;
         }
-        else if (healthRand > 7)
+        else if (healthRand > 11)
         {
             damage *= 2;
         }

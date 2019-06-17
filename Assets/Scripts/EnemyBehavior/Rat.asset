@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 7
   speed: 8
   damage: 2
-  startTimeBtwAttack: 2
+  startTimeBtwAttack: 2.5
   detectDist: 7.06
   stoppingDist: 5
   _retreatDiff: 3.16

@@ -89,12 +89,12 @@ MonoBehaviour:
   projectile: {fileID: 8114487578568309026, guid: 53e12bccbbb9eaf47b81c36f90555849,
     type: 3}
   enemyGraphic: {fileID: 7631553419467896922}
-  anim: {fileID: 5654251162709725217}
   rb2d: {fileID: 4683583768483419452}
   health: 0
   drop:
   - {fileID: 9012738168995547134, guid: c13738c8ddff60a4b8b428cc76db71e8, type: 3}
   - {fileID: 8461500254946693324, guid: 41fdda07f95da7947bf33980d42180c0, type: 3}
+  _renderer: {fileID: 5654251162709725216}
 --- !u!114 &4132520279000146227
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,20 @@ public class MenuManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject winPanel;
 
-    public GameObject[] enemyCount;
+    private List<Enemy> _enemies;
+    protected List<Enemy> enemies
+    {
+        get
+        {
+            if (_enemies == null) _enemies = new List<Enemy>();
+            return _enemies;
+        }
+        set
+        {
+            _enemies = value;
+        }
+    }
+
     public float timer = 0;
 
     void Start()
@@ -32,19 +45,12 @@ public class MenuManager : MonoBehaviour
                 ResumeGame();
             }
         }
-
-        Invoke("win", 0.1f);
     }
 
     private void win()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("enemy");
-
-        if (enemyCount.Length == 0 && timer == 2)
-        {
-            Time.timeScale = 0;
-            winPanel.SetActive(true);
-        }
+        Time.timeScale = 0;
+        winPanel.SetActive(true);
     }
 
     private void PauseGame()
@@ -75,6 +81,18 @@ public class MenuManager : MonoBehaviour
     {
         Application.LoadLevel(0);
         Time.timeScale = 1;
+    }
+
+    public void Register(Enemy enemy)
+    {
+        enemies.Add(enemy);
+    }
+
+    public void Unregister(Enemy enemy)
+    {
+        Debug.Log(enemy);
+        enemies.Remove(enemy);
+        if (enemies.Count == 0) win();
     }
 
 }

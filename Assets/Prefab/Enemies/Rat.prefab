@@ -48,16 +48,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: {fileID: 11400000, guid: 26a60b09534ed35408c415f72e513e99, type: 2}
-  attackArea: {fileID: 7293587664214015580}
   projectile: {fileID: 8114487578568309026, guid: 2691627381a43ee428b1692f61225560,
     type: 3}
   enemyGraphic: {fileID: 7293587663910817747}
-  anim: {fileID: 7293587664124318338}
   rb2d: {fileID: 7293587663910817746}
   health: 0
   drop:
   - {fileID: 9012738168995547134, guid: c13738c8ddff60a4b8b428cc76db71e8, type: 3}
   - {fileID: 8461500254946693324, guid: 41fdda07f95da7947bf33980d42180c0, type: 3}
+  _renderer: {fileID: 7293587664124318339}
 --- !u!50 &7293587663910817746
 Rigidbody2D:
   serializedVersion: 4

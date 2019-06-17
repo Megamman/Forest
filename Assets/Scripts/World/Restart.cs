@@ -11,7 +11,7 @@ public class Restart : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Application.LoadLevel(3);
+            Application.LoadLevel(1);
         }
     }
 #endif

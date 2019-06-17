@@ -16,10 +16,10 @@ MonoBehaviour:
   health: 7
   speed: 8
   damage: 1
-  startTimeBtwAttack: 2
+  startTimeBtwAttack: 1.5
   detectDist: 7.42
   stoppingDist: 5
-  _retreatDiff: 1
+  _retreatDiff: 1.8
   noiseAmount: 3
   meleeAttack: 0
   rangeAttack: 1

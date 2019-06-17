@@ -35,6 +35,13 @@ public class WaypointMove : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, waypoints[randomSpot].position, speed * Time.deltaTime);
 
+        if (waypoints[randomSpot].position.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        } else if (waypoints[randomSpot].position.x <= -0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
 
         if (Vector2.Distance(transform.position, waypoints[randomSpot].position) < 0.2f)
         {

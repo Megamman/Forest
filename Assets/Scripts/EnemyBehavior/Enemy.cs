@@ -27,13 +27,16 @@ public class Enemy : MonoBehaviour
     private float timeAttack;
 
     public GameObject[] drop;
-    private GameObject border;
+    //private GameObject border;
 
-    private SpriteRenderer _renderer;
+    public SpriteRenderer _renderer;
+
+    private MenuManager menuManager;
 
     private void Awake()
     {
         _renderer = GetComponentInChildren<SpriteRenderer>();
+        menuManager = GameObject.FindObjectOfType<MenuManager>();
     }
 
     // Start is called before the first frame update
@@ -41,14 +44,26 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         health = behavior.health;
-        border = GameObject.FindWithTag("Border");
+        //border = GameObject.FindWithTag("Border");
         anim = GetComponentInChildren<Animator>();
+
+        // if (menuManager != null) menuManager.Register(this)
+        menuManager?.Register(this);
     }
 
     void Update()
     {
         if (player == null) return;
-        _renderer.flipX = player.position.x < 0;
+
+        if (player.position.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        } else if (player.position.x <= -0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        //_renderer.flipX = player.position.x < 0.1f;
 
         float move = Input.GetAxis("Horizontal");
         float distFromPlayer = Vector2.Distance(transform.position, player.position);
@@ -148,9 +163,15 @@ public class Enemy : MonoBehaviour
         health -= damage;
         anim.SetTrigger("Hit");
 
+        if (timeAttack <= 0.3f)
+        {
+            timeAttack += 0.3f;
+        }
+
         if (health <= 0)
         {
-            Destroy(gameObject, .3f);
+            menuManager?.Unregister(this);
+            Destroy(gameObject);
             anim.SetTrigger("Die");
 
             if(Random.value > 0.5)
@@ -159,7 +180,7 @@ public class Enemy : MonoBehaviour
             Instantiate(drop[dropRand], transform.position, transform.rotation);
             }
 
-            border.SetActive(false);
+            //border.SetActive(false);
         }
     }
 

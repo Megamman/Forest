@@ -11,19 +11,14 @@ public class MainMenu : MonoBehaviour
     public GameObject menu;
     public GameObject guide;
     
-    public GameObject loadingScreen;
-    public Slider slider;
-    public Text progressText;
-
     void Start()
     {
-        loadingScreen.SetActive(false);
         guide.SetActive(false);
     }
 
-    public void PlayGame ()
+    public void Play()
     {
-        StartCoroutine(LoadAsynchronously());
+        SceneManager.LoadScene("Level_2");
     }
 
     public void QuitGame ()
@@ -44,20 +39,4 @@ public class MainMenu : MonoBehaviour
         guide.SetActive(false);
     }
 
-    IEnumerator LoadAsynchronously()
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
-
-        loadingScreen.SetActive(true);
-
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            slider.value = progress;
-            progressText.text = progress * 100f + "%";
-
-            yield return null;
-        }
-    }
 }
