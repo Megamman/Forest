@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
     private List<GameObject> _rooms;
  
 
+    public GameObject intructText;
+
     public int numbRooms;
 
     public int endRooms;
@@ -23,6 +25,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         timeNewRoom = btwNewRoom;
+        intructText.SetActive(false);
     }
 
     void Update()
@@ -41,11 +44,16 @@ public class LevelManager : MonoBehaviour
         {
             timeNewRoom = btwNewRoom;
         }
-
-        if (rooms.Count == 4 && timeNewRoom < 0)
+        
+        if (rooms.Count == 4 && timeNewRoom <= 0)
         {
             Debug.Log("reload");
-            Application.LoadLevel(3);
+            Application.LoadLevel(1);
+
+            if (timeNewRoom <= -1)
+            {
+                intructText.SetActive(true);
+            }
         }
     }
 
